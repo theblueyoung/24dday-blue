@@ -57,12 +57,8 @@ textarea{min-height:110px}label{display:block;font-size:14px;color:var(--ink2);m
 .hbt{border:0;background:rgba(255,255,255,.18);color:#fff;border-radius:12px;padding:7px 11px;font-size:13px;font-weight:600;flex:none}
 .hbt.rc{display:inline-flex;align-items:center;gap:5px;padding:7px 12px 7px 10px}.hbt.rc svg{width:15px;height:15px;flex:none}
 .hs{font-size:14px;opacity:.85}
-.big{font-size:56px;font-weight:800;line-height:1.05;letter-spacing:-2px;margin:4px 0 0}.big span{font-size:20px;font-weight:600;letter-spacing:0;margin-left:6px;opacity:.9}
+.big{font-size:56px;font-weight:800;line-height:1.05;letter-spacing:-2px;margin:4px 0 0}
 
-.hdv{height:1px;background:rgba(255,255,255,.25);margin:18px 0 0}
-.pc{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px;font-size:14px}
-.pc b{font-size:24px;font-weight:800}.pc span{opacity:.9}
-.yb{height:10px;border-radius:5px;overflow:hidden;margin-top:8px}.yb i{display:block;height:100%;border-radius:5px}
 .avs{display:flex}.avs .av{border:2px solid #fff;margin-left:-9px}.avs .av:first-child{margin-left:0}
 /* 아이콘 */
 .ti{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;flex:none;background:var(--lav);color:var(--pd)}.ti svg{width:21px;height:21px}
@@ -111,15 +107,11 @@ nav button svg{width:24px;height:24px}nav button.on{background:none!important;co
 .st b{display:block;font-size:13px;font-weight:600;white-space:nowrap;color:#fff}.st.dn b{color:var(--hdnt)}.st.cur b{color:#fff;font-weight:800}
 .st span{color:#fff;font-size:12px}
 
-.stl{margin:4px 0 0 6px;padding-left:14px;border-left:3px solid var(--lav)}
-.sc{display:block;width:100%;text-align:left;border:1.5px solid var(--ln);background:#fff;border-radius:20px;padding:16px;margin-bottom:12px}
-.sc:last-child{margin-bottom:0}
-.sc b{display:block;font-size:16px;margin-top:10px}.sc small{display:block;margin-top:2px}
 .stg{display:inline-flex;align-items:center;gap:5px;border-radius:8px;padding:4px 9px;font-size:13px;font-weight:700}.stg svg{width:14px;height:14px}
 .sa{font-size:14px;font-weight:700;color:var(--sub);white-space:nowrap}
 .stg.dn{background:var(--dnl);color:var(--dnf)}
-.sc.cur{border-color:var(--p)}.stg.cur{background:var(--lav);color:var(--pd)}.sc.cur .sa{color:var(--pd)}
-.stg.fu{background:var(--ln);color:var(--ink2)}.sc.fu .sa,.sc.fu small{color:var(--ink2)}
+.stg.cur{background:var(--lav);color:var(--pd)}.sc.cur .sa{color:var(--pd)}
+.stg.fu{background:var(--ln);color:var(--ink2)}
 
 
 
@@ -228,24 +220,16 @@ body{background:radial-gradient(ellipse at 15% 10%,#F3F5F8 0,transparent 35%),ra
 /* 히어로 */
 .hero{margin:6px 16px 0;border-radius:27px;background:linear-gradient(137deg,#0F1B2D 0%,#2C45D9 54%,#2C45D9 100%);box-shadow:0 14px 28px rgba(0,0,0,.28)}
 .hero::before,.hero::after{background:rgba(255,255,255,.06)}
-.pc b{color:var(--ok)}
-.yb{background:rgba(255,255,255,.14)}.yb i{background:var(--ok)}
 .st.cur i{background:var(--pink)}
 /* 버튼 · 칩 · 체크 */
 .btn{background:linear-gradient(135deg,#3D5AFE,#2C45D9);box-shadow:0 8px 18px -10px rgba(0,0,0,.7)}
 .btn.lv{background:#ECEFFF;color:#3D5AFE;box-shadow:none}.btn.gh{box-shadow:none}.btn.gy{background:var(--gy);box-shadow:none}.btn.rd{background:var(--co);box-shadow:none}.btn.wt{box-shadow:none}
 .bo{background:#ECEFFF;color:#3D4859;border-radius:9px}
-.ti.sm.yl{background:#FFF3DC}
 .av{box-shadow:0 0 0 2px #fff}
 .seg2{background:rgba(255,255,255,.55);border:1px solid #fff;margin:0 16px 18px}
 .seg2 button.sel{box-shadow:0 3px 10px rgba(0,0,0,.12)}
 .chips button{background:rgba(255,255,255,.7);border:1px solid #fff}
 /* 단계 카드 (홈) – 지금 단계는 진한 보라로 확 띄움 */
-.sc{background:rgba(255,255,255,.7);border:1px solid #fff}
-.sc.cur{background:linear-gradient(155deg,#2C45D9,#2C45D9);border-color:rgba(255,255,255,.7);color:#fff;box-shadow:0 8px 16px rgba(0,0,0,.25)}
-.sc.cur small{color:#fff}.sc.cur .sa{color:#fff}
-.sc.fu{background:rgba(255,255,255,.45)}
-.stl{border-left-color:rgba(0,0,0,.22)}
 /* 자금 · 서비스 진한 카드 */
 .dk,.eb{background:linear-gradient(137deg,#0F1B2D 0%,#2C45D9 54%,#2C45D9 100%);box-shadow:0 14px 28px rgba(0,0,0,.25);border-radius:24px}
 .eb{margin:0 16px 0}.ep{color:var(--gold)}
@@ -313,7 +297,7 @@ nav button.on svg{transform:translateY(-19px);color:#fff}
 body{background:#E9EDF2}
 #app{background:#F3F5F8}
 ::selection{background:#D9DFFF;color:#0F1B2D}
-.big,.pc b,.cnt,.sa,.fs-num,.fs-lg b,.kv b,.ep{font-variant-numeric:tabular-nums}
+.big,.cnt,.sa,.fs-num,.fs-lg b,.kv b,.ep{font-variant-numeric:tabular-nums}
 .c{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none;border:1px solid rgba(24,33,47,.06)!important;border-radius:20px;margin:12px 16px 0;padding:20px 18px!important;box-shadow:0 1px 2px rgba(0,0,0,.04)}
 .c.g-cur{border:1.5px solid #3D5AFE!important;box-shadow:0 6px 16px -8px rgba(0,0,0,.18)}
 .c.g-dn{background:#fff}
@@ -327,16 +311,12 @@ body{background:#E9EDF2}
 .btn.lv{background:#ECEFFF;color:#3D5AFE}
 .bo,.pb,.hbt{transition:transform .16s cubic-bezier(.23,1,.32,1)}
 .cb.on{background:#0B8A60;border-color:#0B8A60}
-.sc{background:#fff;border:1px solid rgba(24,33,47,.08)}
-.sc.cur{background:#3D5AFE;border-color:#3D5AFE;box-shadow:0 10px 20px -14px rgba(0,0,0,.6)}
-.sc.fu{background:#F7F8FA}
 .stg.cur{background:#ECEFFF;color:#3D5AFE}
 .st.cur i{background:#2C45D9;border-color:#fff}
-.st.dn i,.st.dn::before,.st.cur::before{background:#fff;border-color:#fff}.st.dn b{color:#fff}.pc b{color:#fff}.yb i{background:#fff}
+.st.dn i,.st.dn::before,.st.cur::before{background:#fff;border-color:#fff}.st.dn b{color:#fff}
 .dk,.eb{background:linear-gradient(160deg,#5068FE 0%,#2C45D9 100%)}
 .seg2{background:#E9EDF2;border:0}
 .seg2 button.sel{color:#0F1B2D}
-.ti.sm.yl{background:#FFF3DC}
 nav button.on svg{color:#fff}
 .nbump i{background:#3D5AFE;box-shadow:0 6px 14px rgba(0,0,0,.28)}
 .aucard{background:#fff}
@@ -359,6 +339,59 @@ nav button.on svg{color:#fff}
 .fs-lg b{margin-left:auto;font-size:13px;color:var(--ink);white-space:nowrap}
 .more{display:flex;align-items:center;min-height:44px;margin-top:4px;font-size:14px;font-weight:600;color:var(--p);cursor:pointer}
 @media(prefers-reduced-motion:reduce){.fs-bar i{animation:none}.btn,.bo,.pb,.hbt{transition:none}}
+/* ── 홈 고도화 (2026-11-26): 장식을 덜고 글자·숫자 위계로. 인디고 카드는 맨 위 하나 ── */
+:root{--ease-out:cubic-bezier(.23,1,.32,1)}
+.hero{padding:22px 22px 18px}
+.hs{font-size:14px;font-weight:600;color:#fff;opacity:1}
+.big{font-size:56px;margin-top:8px;line-height:1}
+.hsub{margin:10px 0 0;font-size:15px;color:#fff;font-weight:500}.hsub b{margin-left:8px;font-weight:800;font-variant-numeric:tabular-nums}
+.metro{margin:24px -8px 0}
+.st.cur i{animation:none}
+.c{padding:22px 20px!important}
+.shd{align-items:flex-start;margin-bottom:10px}
+.shd>a{display:flex;align-items:center;min-height:44px;margin:-12px -4px -12px 0;padding:0 4px;color:var(--sub);font-weight:600}
+.shs{display:block;margin-top:2px;font-size:13px;font-weight:500}
+.cnt{font-size:14px}
+.c>.more:last-child{margin:6px 0 -12px}
+.cb{transition:transform .16s var(--ease-out),background .2s,border-color .2s}.cb:active{transform:scale(.9)}
+.fs-top{display:block;margin-top:0}
+.fs-num{letter-spacing:-1.2px}
+.fs-gap{display:inline-block;margin:12px 0 0;padding:7px 12px;border-radius:10px;font-weight:500;text-align:left;color:#7A3A35;line-height:1.4}
+.fs-gap::before{content:"";display:inline-block;vertical-align:2px;width:7px;height:7px;margin-right:8px;border-radius:50%;background:#B3342C}
+.fs-gap b{color:#B3342C;font-weight:700}.fs-gap.ok{color:#2F6B55}.fs-gap.ok b{color:#0B8A60}.fs-gap.ok::before{background:#0E9F6E}
+.fs-bar{height:10px;margin:20px 0 16px}
+.fs-lg{gap:14px 16px}
+.fs-lg div{display:grid;grid-template-columns:8px 1fr;gap:0 8px;align-items:center}
+.fs-lg span{color:var(--sub)}
+.fs-lg b{grid-column:2;margin:2px 0 0;font-size:15px;font-weight:700}
+.stl{list-style:none;margin:2px -8px 0;padding:0;border:0}
+.stl li{position:relative}.stl li+li{margin-top:2px}
+.stl li:not(:last-child)::after{content:"";position:absolute;left:23px;top:42px;bottom:-16px;width:2px;background:#E6EBF2}
+.sr{display:grid;grid-template-columns:24px 1fr;gap:12px;width:100%;text-align:left;border:0;background:none;border-radius:16px;padding:14px 12px;color:inherit;font:inherit;transition:background .2s,transform .16s var(--ease-out)}
+.sr:active{transform:scale(.985)}
+.mk{position:relative;z-index:1;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;border:1.5px solid var(--mute);color:var(--sub);background:#fff;font-variant-numeric:tabular-nums}
+.mk svg{width:12px;height:12px}
+.sr.dn .mk{background:#0E9F6E;border-color:#0E9F6E;color:#fff}
+.sr.cur{background:#ECEFFF}.sr.cur .mk{background:#3D5AFE;border-color:#3D5AFE;color:#fff}
+.sr-b{min-width:0}
+.sr-h{display:flex;align-items:center;gap:8px}
+.sr-h b{font-size:16px;font-weight:700;color:var(--ink);letter-spacing:-.3px}
+.sr-h em{font-style:normal;font-size:12.5px;font-weight:700;border-radius:6px;padding:2px 7px;background:#EEF1F5;color:var(--ink2);white-space:nowrap}
+.sr.dn em{background:#E3F5EC;color:#0B8A60}.sr.cur em{background:#3D5AFE;color:#fff}
+.sr-h .sa{margin-left:auto;font-size:15px;color:var(--ink)}
+.sr-t{display:block;margin-top:4px;font-size:14px;color:var(--ink2);line-height:1.45;word-break:keep-all}
+.sr small{display:block;margin-top:4px;font-size:13px;font-variant-numeric:tabular-nums}
+.sr.dn .sr-h b,.sr.dn .sr-t{color:var(--sub)}
+@media(hover:hover) and (pointer:fine){.sr:not(.cur):hover{background:#F5F7FA}.shd>a:hover{color:var(--ink)}}
+/* 화면에 처음 들어올 때만: 카드가 차례로 떠오르고, 단계 선이 그어지고, 자금 막대가 채워짐 */
+.fs-bar i{animation-name:none}.arrive .fs-bar i{animation-name:fsin}
+.arrive>.hero,.arrive>.c{animation:hin .5s var(--ease-out) both}
+.arrive>.c:nth-child(3){animation-delay:.06s}.arrive>.c:nth-child(4){animation-delay:.11s}.arrive>.c:nth-child(5){animation-delay:.15s}
+.arrive .st::before{transform-origin:left;animation:mline .6s .2s var(--ease-out) both}
+.arrive .st:nth-child(3)::before{animation-delay:.3s}.arrive .st:nth-child(4)::before{animation-delay:.4s}
+@keyframes hin{from{opacity:0;transform:translateY(10px)}}
+@keyframes mline{from{transform:scaleX(0)}}
+@media(prefers-reduced-motion:reduce){.arrive>.hero,.arrive>.c,.arrive .st::before,.arrive .fs-bar i{animation:none}.cb,.sr{transition:none}}
 </style></head>
 <body><div id="app"><div id="scr"></div><nav id="nv"></nav><div id="sh"></div><button id="bn" data-a="ntl" aria-live="polite"></button><div id="tt"></div></div>
 <script>
@@ -493,7 +526,6 @@ uplus:'<circle cx="9" cy="8" r="3.4"/><path d="M3 19.5c.6-3.3 3-5 6-5s5.4 1.7 6 
 doc:'<path d="M7 3h7l4 4v13H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/>',coin:'<circle cx="12" cy="12" r="8"/><path d="M8.5 10l1.5 5 2-4 2 4 1.5-5"/>',key:'<circle cx="8" cy="12" r="3.5"/><path d="M11.5 12H21M17 12v3M20 12v2.5"/>',brush:'<rect x="4" y="4" width="13" height="5" rx="1.5"/><path d="M17 6.5h2.5v5H11v3.5M9.5 15h3v6h-3z"/>',spark:'<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M18 16l.8 2.2L21 19l-2.2.8L18 22l-.8-2.2L15 19l2.2-.8z"/>',truck:'<path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7.5" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/>',pin:'<path d="M12 21s6-5.5 6-11a6 6 0 0 0-12 0c0 5.5 6 11 6 11z"/><circle cx="12" cy="10" r="2.2"/>',trash:'<path d="M5 7h14M9 7V4h6v3M7 7l1 13h8l1-13"/>',scale:'<path d="M12 4v16M6 20h12M5 8h14M5 8l-2.5 6a3 3 0 0 0 5 0zM19 8l-2.5 6a3 3 0 0 0 5 0z"/>',bank:'<path d="M3 9l9-5 9 5M5 10v7M10 10v7M14 10v7M19 10v7M3 20h18"/>'};
 const ic=(k,sw=1.8)=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[k]}</svg>`;
 const BELLOFF='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.6 1.8H4.4z"/><path d="M10 21a2.2 2.2 0 0 0 4 0"/><path d="M3.5 3.5l17 17" stroke="var(--offb)" stroke-width="5"/><path d="M3.5 3.5l17 17" stroke-width="2.4"/></svg>';
-const BOLT='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 2L4.5 13.5h6.5L9.5 22l10-12.5h-6.8z" fill="#FFC633" stroke="#E5A100" stroke-width="1.3" stroke-linejoin="round"/></svg>';
 const LOGO='<svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5068FE"/><stop offset="1" stop-color="#3D5AFE"/></linearGradient></defs><rect width="40" height="40" rx="12" fill="url(#lg)"/><path d="M24.5 11.5V8.5h3.2v6" fill="#fff"/><path d="M7.5 20.5L20 9.5l12.5 11" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 18.5V30a1.5 1.5 0 0 0 1.5 1.5h15A1.5 1.5 0 0 0 29 30V18.5" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/><path d="M15.2 23.6l3.3 3.3 6.2-6.4" fill="none" stroke="#FFD43B" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 const et=e=>`<span class="ti">${ic(e.i)}</span>`;
 const cb=e=>`<button class="cb ${done(e)?'on':''}" data-a="chk" data-id="${e.id}" aria-pressed="${done(e)}" aria-label="${esc(e.n)} 완료">${ic('check',3)}</button>`;
@@ -557,28 +589,26 @@ P.onb=()=>`<div class="au onbd"><button class="aulogo sm" data-a="go" data-p="au
 <label>지금 사는 집은? (선택)</label><div class="seg2" style="margin:10px 0 0">${[['','해당 없음'],['sale','팔아요'],['rent','전·월세']].map(x=>`<button class="${S.leave.t===x[0]?'sel':''}" aria-pressed="${S.leave.t===x[0]}" data-a="lt" data-v="${x[0]}">${x[1]}</button>`).join('')}</div>${S.leave.t?`<label>지금 집에서 돈 받는 날</label><input type="date" id="old" value="${iso(ld())}">`:''}
 <button class="btn wh" style="margin-top:28px" data-a="start">시작하기</button></div></div>`;
 
-function fsum(){const R=rows(),O=R.filter(r=>r.io==='out'),tot=O.reduce((a,r)=>a+r.amt,0);if(!tot)return`<div class="c"><div class="shd"><div class="sh2"><span class="hic">${ic('fund',2)}</span>이사 자금</div><a data-a="go" data-p="fund">입력하기 ›</a></div><p class="sb" style="margin:4px 0 0">집 값을 넣으면 이사에 드는 돈과 모자란 돈을 보여 드려요.</p></div>`;
+function fsum(){const R=rows(),O=R.filter(r=>r.io==='out'),tot=O.reduce((a,r)=>a+r.amt,0);if(!tot)return`<div class="c"><div class="shd"><div class="sh2">이사 자금</div><a data-a="go" data-p="fund">입력하기 ›</a></div><p class="sb" style="margin:4px 0 0">집 값을 넣으면 이사에 드는 돈과 모자란 돈을 보여 드려요.</p></div>`;
 const paid=O.filter(r=>r.dn).reduce((a,r)=>a+r.amt,0),have=S.banks.reduce((a,b)=>a+b.amt,0),inc=R.filter(r=>r.io==='in'&&!r.dn).reduce((a,r)=>a+r.amt,0),k=lack(have,R);
 let left=tot;const seg=[paid,have,inc].map(v=>{const x=Math.min(v,left);left-=x;return x});seg.push(left);
 const C=['#3D5AFE','#0E9F6E','#F5B83D','#F2B8B2'],N=['낸 돈','내 통장','들어올 돈','모자란 돈'],pc=v=>v/tot*100;
-return`<div class="c"><div class="shd"><div class="sh2"><span class="hic">${ic('fund',2)}</span>이사 자금</div><a data-a="go" data-p="fund">자세히 보기 ›</a></div>
-<div class="fs-top"><div><small>이사에 드는 돈</small><span class="fs-num">${won(tot)}</span></div><span class="fs-gap ${k.gap?'':'ok'}">${k.gap?`${won(k.gap)} 모자라요<span>${md(k.at.d)} ${esc(k.at.n)} 때</span>`:'충분해요<span>날짜 순서로 맞춰 봤어요</span>'}</span></div>
+return`<div class="c"><div class="shd"><div class="sh2">이사 자금</div><a data-a="go" data-p="fund">자세히 보기 ›</a></div>
+<div class="fs-top"><small>이사에 드는 돈</small><span class="fs-num">${won(tot)}</span></div><p class="fs-gap ${k.gap?'':'ok'}">${k.gap?`${md(k.at.d)} ${esc(k.at.n)} 때 <b>${won(k.gap)}</b> 모자라요`:'날짜 순서로 맞춰 보니 <b>돈이 충분해요</b>'}</p>
 <div class="fs-bar" role="img" aria-label="${N.map((n,i)=>n+' '+won(seg[i])).join(', ')}">${seg.map((v,i)=>v?`<i style="width:${pc(v)}%;background:${C[i]}"></i>`:'').join('')}</div>
-<div class="fs-lg">${N.map((n,i)=>`<div><i style="background:${C[i]}"></i>${n}<b>${won(seg[i])}</b></div>`).join('')}</div></div>`}
+<div class="fs-lg">${N.map((n,i)=>`<div><i style="background:${C[i]}"></i><span>${n}</span><b>${won(seg[i])}</b></div>`).join('')}</div></div>`}
 P.home=()=>{const L=vis(),n=L.filter(done).length,pct=Math.round(n/L.length*100),cs=curStg(),T=L.filter(e=>sof(e)===cs.k),td=T.filter(done).length,U=T.filter(e=>!done(e)),d=dday();
 return`<div class="top"><div class="logo">${LOGO}24dday</div><div class="row" style="gap:8px">
 <button class="inv" data-a="inv" aria-label="일정 함께 관리할 사람 초대하기"><span class="ip">${ic('uplus',2)}</span><span>공유 <b>${S.pp.length}</b>명 참여중</span></button>
 <button class="bell ${S.bell?'':'off'}" data-a="ntl" aria-label="알림 목록${S.bell?'':' (알림 꺼짐)'}">${S.bell&&notes().filter(n=>!S.rd[n.k]).length?`<span class="nd">${notes().filter(n=>!S.rd[n.k]).length}</span>`:''}${S.bell?ic('bell',2):BELLOFF}</button></div></div>
-<div class="hero"><div class="htop"><div class="hs">${md(S.base)} 잔금일</div><button class="hbt" data-a="addr">수정</button></div><div class="big" style="margin-top:0">${d>0?'D-'+d:d===0?'D-day':'D+'+(-d)}<span>${d>0?'일 남음':''}</span></div>
-<div class="hdv"></div>
-<div class="pc"><span>진행률</span><b>${pct}%</b></div><div class="yb"><i style="width:${pct}%"></i></div>
+<div class="hero"><div class="htop"><div class="hs">잔금일 ${md(S.base)} (${'일월화수목금토'[new Date(S.base).getUTCDay()]})</div><button class="hbt" data-a="addr">수정</button></div><div class="big">${d>0?'D-'+d:d===0?'D-day':'D+'+(-d)}</div>
+<p class="hsub">할 일 ${L.length}개 중 ${n}개 끝냈어요<b>${pct}%</b></p>
 ${metro()}</div>
-<div class="c"><div class="shd"><div class="sh2"><span class="ti sm yl">${BOLT}</span>지금 챙길 일</div><span class="cnt cur">${td}/${T.length}</span></div>
+<div class="c"><div class="shd"><div><div class="sh2">지금 챙길 일</div><small class="shs">${sno(cs)}단계 · ${cs.n}</small></div><span class="cnt cur">${td}/${T.length} 끝</span></div>
 ${U.slice(0,3).map(e=>`<div class="li">${cb(e)}<div><div class="nm">${esc(e.n)}</div><small>${md(dt(e))} · ${when(e)}</small></div>${bd(e.w)}</div>`).join('')||'<p class="sb">이번 단계 할 일을 모두 끝냈어요.</p>'}${U.length>3?`<a class="more" data-a="go" data-p="tl">남은 ${U.length-3}개 더 보기 ›</a>`:''}</div>
-${fsum()}<div class="c"><div class="shd" style="margin-bottom:14px"><div class="sh2"><span class="hic">${ic('tl',2)}</span>단계별 주요일정</div><a data-a="go" data-p="tl">자세히 보기 ›</a></div>
-<div class="stl">${SG().map(g=>{const G=L.filter(e=>sof(e)===g.k),st=stS(g),pay=rows().filter(r=>r.ev===g.m&&r.io==='out').reduce((a,r)=>a+r.amt,0),K=G.filter(e=>!e.big);
-return`<button class="sc ${st}" data-a="go" data-p="tl"><div class="row sp">${stTag(g,st)}<span class="sa">${pay?won(pay):''}</span></div>
-<b>${esc(K.slice(0,3).map(e=>e.n.replace(/ \(.*\)$/,'').replace(/ (송금|보내기|받기|비교|확인|알아보기)$/,'')).join(' · '))}${K.length>3?` 외 ${K.length-3}개`:''}</b><small>${md(dt(G[0]))} ~ ${md(dt(G[G.length-1]))} · 할 일 ${G.filter(done).length}/${G.length}</small></button>`}).join('')}</div></div>`};
+${fsum()}<div class="c"><div class="shd"><div class="sh2">단계별 일정</div><a data-a="go" data-p="tl">자세히 보기 ›</a></div>
+<ol class="stl">${SG().map(g=>{const G=L.filter(e=>sof(e)===g.k),st=stS(g),pay=rows().filter(r=>r.ev===g.m&&r.io==='out').reduce((a,r)=>a+r.amt,0),K=G.filter(e=>!e.big);
+return`<li><button class="sr ${st}" data-a="go" data-p="tl" aria-label="${sno(g)}단계 ${g.n}, ${st==='dn'?'끝':st==='cur'?'지금 단계':dl(G[0])}"><span class="mk">${st==='dn'?ic('check',3):sno(g)}</span><span class="sr-b"><span class="sr-h"><b>${g.n}</b><em>${st==='dn'?'끝':st==='cur'?'지금':dl(G[0])}</em><span class="sa">${pay?won(pay):''}</span></span><span class="sr-t">${esc(K.slice(0,3).map(e=>e.n.replace(/ \(.*\)$/,'').replace(/ (송금|보내기|받기|비교|확인|알아보기)$/,'')).join(' · '))}${K.length>3?` 외 ${K.length-3}개`:''}</span><small>${md(dt(G[0]))} ~ ${md(dt(G[G.length-1]))} · 할 일 ${G.filter(done).length}/${G.length}</small></span></button></li>`}).join('')}</ol></div>`};
 
 const docs=()=>S.docs.map((d,i)=>({d,i})).filter(x=>ok({t:x.d[4]}));
 P.tl=()=>{const L=vis(),dc=S.sub==='docs',D=docs();
@@ -655,7 +685,7 @@ if(x.t==='call')b=`<h2>${x.v}에 전화할까요?</h2><p class="sb">실제 앱�
 if(x.t==='reg')b=`<h2>업체 등록 문의</h2><p class="sb">${SV[S.svc].n} 업체 정보를 남겨주시면 담당자가 연락드려요.</p><label>업체명</label><input id="rn"><label>연락처</label><input id="rp" type="tel" inputmode="tel"><label>활동 지역</label><input id="ra" placeholder="예: 서울 송파구, 성남 분당구"><button class="btn" data-a="regs">문의 보내기</button>`;
 h.innerHTML='<div role="dialog" aria-modal="true"><button class="shx" data-a="close" aria-label="닫기">'+ic('x',2.4)+'</button>'+b+'</div>';h.style.display='flex'}
 
-function render(){clearTimeout(render.lt);setToday();save();if(S.pg==='land')render.lt=setTimeout(()=>{if(S.pg==='land')landGo()},2800);const o=['land','intro','auth','onb'].includes(S.pg);$('#scr').innerHTML=P[S.pg]();
+function render(){clearTimeout(render.lt);setToday();save();if(S.pg==='land')render.lt=setTimeout(()=>{if(S.pg==='land')landGo()},2800);const o=['land','intro','auth','onb'].includes(S.pg);$('#scr').classList.toggle('arrive',S.pg!==render.pp);render.pp=S.pg;$('#scr').innerHTML=P[S.pg]();
 const T=[['home','홈'],['tl','일정'],['fund','자금'],['svc','서비스'],['my','마이']],cur={q:'svc'}[S.pg]||S.pg;
 const nv=$('#nv'),ni=T.findIndex(t=>t[0]===cur),pi=render.ni??ni;render.ni=ni;
 nv.style.display=o?'none':'flex';nv.style.setProperty('--i',pi);
