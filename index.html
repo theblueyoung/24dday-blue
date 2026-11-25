@@ -313,7 +313,7 @@ nav button.on svg{transform:translateY(-19px);color:#fff}
 body{background:#E9EDF2}
 #app{background:#F3F5F8}
 ::selection{background:#D9DFFF;color:#0F1B2D}
-.big,.pc b,.cnt,.sa,.fs-num,.fs-lg b,.fs-it b,.fs-it em,.kv b,.ep{font-variant-numeric:tabular-nums}
+.big,.pc b,.cnt,.sa,.fs-num,.fs-lg b,.kv b,.ep{font-variant-numeric:tabular-nums}
 .c{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none;border:1px solid rgba(24,33,47,.06)!important;border-radius:20px;margin:12px 16px 0;padding:20px 18px!important;box-shadow:0 1px 2px rgba(0,0,0,.04)}
 .c.g-cur{border:1.5px solid #3D5AFE!important;box-shadow:0 6px 16px -8px rgba(0,0,0,.18)}
 .c.g-dn{background:#fff}
@@ -343,9 +343,9 @@ nav button.on svg{color:#fff}
 .aucard .seg2 button.sel{background:#3D5AFE;box-shadow:none}
 .vc{background:#fff;border:1px solid rgba(24,33,47,.08)}
 /* 홈: 이사 자금 요약 */
-.fs-top{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-top:6px}
+.fs-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px;margin-top:6px}
 .fs-top small{display:block;font-size:13px;color:var(--sub);font-weight:600}
-.fs-num{display:block;font-size:30px;font-weight:800;letter-spacing:-1px;line-height:1.2;color:var(--ink);margin-top:2px}
+.fs-num{display:block;white-space:nowrap;font-size:30px;font-weight:800;letter-spacing:-1px;line-height:1.2;color:var(--ink);margin-top:2px}
 .fs-gap{flex:none;font-size:13px;font-weight:700;color:#B3342C;background:#FCEDEB;border-radius:10px;padding:6px 10px;text-align:right;line-height:1.35}
 .fs-gap.ok{color:#0B8A60;background:#E3F5EC}
 .fs-gap span{display:block;font-weight:500;color:#7A3A35}.fs-gap.ok span{color:#2F6B55}
@@ -357,20 +357,14 @@ nav button.on svg{color:#fff}
 .fs-lg div{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink2);min-width:0}
 .fs-lg i{width:8px;height:8px;border-radius:2px;flex:none}
 .fs-lg b{margin-left:auto;font-size:13px;color:var(--ink);white-space:nowrap}
-.fs-it{border-top:1px solid var(--ln);margin-top:16px;padding-top:12px}
-.fs-it>small{display:block;font-size:13px;font-weight:600;color:var(--sub);margin-bottom:4px}
-.fs-it p{display:grid;grid-template-columns:3.2em minmax(40px,1fr) auto;align-items:center;gap:10px;margin:8px 0 0;font-size:14px}
-.fs-it p>span{font-weight:600;white-space:nowrap}
-.fs-it u{display:block;height:6px;border-radius:3px;background:#EEF1F5;overflow:hidden;text-decoration:none}
-.fs-it u i{display:block;height:100%;background:#3D5AFE;border-radius:3px}
-.fs-it b{font-weight:700;white-space:nowrap;text-align:right;min-width:9.6em}.fs-it em{font-style:normal;color:var(--sub);font-size:12.5px;margin-left:4px}
+.more{display:flex;align-items:center;min-height:44px;margin-top:4px;font-size:14px;font-weight:600;color:var(--p);cursor:pointer}
 @media(prefers-reduced-motion:reduce){.fs-bar i{animation:none}.btn,.bo,.pb,.hbt{transition:none}}
 </style></head>
 <body><div id="app"><div id="scr"></div><nav id="nv"></nav><div id="sh"></div><button id="bn" data-a="ntl" aria-live="polite"></button><div id="tt"></div></div>
 <script>
 let TODAY=Date.UTC(2026,10,5);const DEMODAY=TODAY,DAY=864e5,$=s=>document.querySelector(s);
 const PC=['#3D5AFE','#FF8A4C','#3B82F6','#E64980','#F59F00','#15AABF'];
-const STG=[{k:1,n:'계약금 단계',m:'c1'},{k:2,n:'중도금 단계',m:'c2'},{k:3,n:'잔금 단계',m:'bal'},{k:4,n:'이사 단계',m:'mv'}];
+const STG=[{k:1,n:'계약하기',s:'계약',m:'c1'},{k:2,n:'중도금 내기',s:'중도금',m:'c2'},{k:3,n:'잔금 내기',s:'잔금',m:'bal'},{k:4,n:'이사하기',s:'이사',m:'mv'}];
 const S={pg:'land',rd:{},sub:'list',type:'매매',int:1,base:Date.UTC(2026,10,28),sh:null,svc:null,q:{},bell:1,nt:{due:1,mate:1,svc:1,stg:0},addr:{from:'서울 송파구 잠실동',to:'성남 분당구 정자동'},
 banks:[{n:'국민은행',amt:5000},{n:'신한은행',amt:4000},{n:'카카오뱅크',amt:3000}],
 docs:[['신분증',1,'me','계약·잔금 때 본인 확인에 써요'],['계약서 사본',1,'me','대출·신고에 필요해요'],['집주인·빚 기록 (등기부등본)',1,'me','집 주인과 빚이 적힌 문서예요. 인터넷등기소에서 떼요'],['내 도장 증명서 (인감증명서)',0,'me','내 도장이 맞다는 증명. 주민센터에서 떼요','buy'],['주소 바뀐 기록 (주민등록초본)',0,'me','주민센터에서 떼요. 집을 내 이름으로 바꿀 때 필요해요','buy'],['대출 서류',0,'p2','소득 증명 등. 은행에 목록을 먼저 물어보세요','nowol'],['전월세 신고 확인서',0,'me','전월세 계약 신고를 마쳤다는 확인서예요','rent'],['보증금 지키는 보험 신청 서류',0,'me','계약서·보증금 보낸 내역 등을 준비해요','jeon'],['이사업체 계약서',0,'me','파손 보상 조건을 확인해 두세요'],['집 팔 때 쓰는 도장 증명서 (매도용 인감)',0,'me','살 사람 정보를 적어 주민센터에서 떼요','lsale'],['집문서 (등기권리증)',0,'me','내가 집 주인임을 보여주는 문서예요','lsale']],
@@ -513,11 +507,11 @@ const av=(w,lg)=>{const p=who(w);return`<span class="av${lg?' lg':''}" style="ba
 const bd=(w,lg)=>w==='all'?`<span class="avs sm" title="함께">${S.pp.map(p=>av(p.id)).join('')}</span>`:av(w,lg);
 const wopt=s=>[...S.pp.map(p=>[p.id,p.n+(p.id==='me'?' (나)':'')]),['all','함께 (모두)']].map(o=>`<option value="${o[0]}" ${s===o[0]?'selected':''}>${esc(o[1])}</option>`).join('');
 const stS=g=>{const G=vis().filter(e=>sof(e)===g.k);return G.every(done)?'dn':g===curStg()?'cur':'fu'};
-const stTag=(g,st)=>{const G=vis().filter(e=>sof(e)===g.k),n=sno(g),nm=g.n.replace(' 단계','');return`<span class="stg ${st}">${st==='dn'?`${ic('check',2.6)}${n}단계: ${nm} 완료`:st==='cur'?`${n}단계: ${g.n} (현재)`:`${n}단계: ${g.n} (${dl(G[0])})`}</span>`};
+const stTag=(g,st)=>{const G=vis().filter(e=>sof(e)===g.k),n=sno(g);return`<span class="stg ${st}">${st==='dn'?`${ic('check',2.6)}${n}단계 · ${g.n} · 끝`:st==='cur'?`${n}단계 · ${g.n} · 지금`:`${n}단계 · ${g.n} · ${dl(G[0])}`}</span>`};
 const stI=(g,st)=>st==='dn'?ic('check',3):g.k;
 const shortA=a=>a.split(' ').pop();
 function metro(){const cs=curStg();
-return'<div class="metro">'+SG().map(g=>{const st=stS(g);return`<div class="st ${st}"><i></i><b>${g.n.replace(' 단계','')}</b><span>${md(dt(E(g.m)))}</span></div>`}).join('')+'</div>'}
+return'<div class="metro">'+SG().map(g=>{const st=stS(g);return`<div class="st ${st}"><i></i><b>${g.s}</b><span>${md(dt(E(g.m)))}</span></div>`}).join('')+'</div>'}
 function notes(){if(!S.bell)return[];const L=vis(),R=[],mate=S.pp[1];
 const nx=L.find(e=>!done(e)&&dt(e)>=TODAY);
 if(S.nt.due&&nx)R.push({k:'due',ic:'tl',t:'할 일 날짜가 다가와요',b:`${dl(nx)} · '${nx.n}' 날이에요`,tm:'방금'});
@@ -525,7 +519,7 @@ const md_=mate&&L.filter(e=>e.w===mate.id&&done(e)).pop();
 if(S.nt.mate&&md_)R.push({k:'mate',ic:'check',t:`${mate.n}님이 할 일을 끝냈어요`,b:`'${md_.n}' 완료`,tm:'1시간 전'});
 if(S.nt.svc&&(!S.fresh||S.asked))R.push({k:'svc',ic:'svc',t:'상담 답변이 왔어요',b:'늘봄익스프레스 이사: 12/12 포장이사 가능해요. 견적서를 보내드렸어요.',tm:'어제'});
 const done1=SG().filter(g=>stS(g)==='dn').pop();
-if(S.nt.stg&&done1)R.push({k:'stg',ic:'key',t:`${done1.n}를 모두 마쳤어요`,b:`이제 ${curStg().n}예요. 지금 챙길 일을 확인해 보세요.`,tm:'2일 전'});
+if(S.nt.stg&&done1)R.push({k:'stg',ic:'key',t:`'${done1.n}' 단계를 모두 마쳤어요`,b:`이제 '${curStg().n}' 차례예요. 지금 챙길 일을 확인해 보세요.`,tm:'2일 전'});
 return R}
 const PAST=()=>S.fresh?[]:[...(S.nt.svc?[{ic:'svc',t:'상담 답변이 왔어요',b:'한결 법무사사무소: 등기 비용 견적을 보내드렸어요.',tm:'11/1'}]:[]),{ic:'uplus',t:'민희님이 일정 공유에 참여했어요',b:'이제 할 일을 나눠 맡을 수 있어요.',tm:'10/30'}];
 function banner(n){if(!n)return;const x=$('#bn');x.innerHTML=`<span class="nic">${ic(n.ic,2)}</span><div><b>${esc(n.t)}</b><small>${esc(n.b)}</small></div><em>지금</em>`;x.classList.add('show');clearTimeout(banner.h);banner.h=setTimeout(()=>x.classList.remove('show'),3800)}
@@ -563,17 +557,15 @@ P.onb=()=>`<div class="au onbd"><button class="aulogo sm" data-a="go" data-p="au
 <label>지금 사는 집은? (선택)</label><div class="seg2" style="margin:10px 0 0">${[['','해당 없음'],['sale','팔아요'],['rent','전·월세']].map(x=>`<button class="${S.leave.t===x[0]?'sel':''}" aria-pressed="${S.leave.t===x[0]}" data-a="lt" data-v="${x[0]}">${x[1]}</button>`).join('')}</div>${S.leave.t?`<label>지금 집에서 돈 받는 날</label><input type="date" id="old" value="${iso(ld())}">`:''}
 <button class="btn wh" style="margin-top:28px" data-a="start">시작하기</button></div></div>`;
 
-function fsum(){const R=rows(),O=R.filter(r=>r.io==='out'),tot=O.reduce((a,r)=>a+r.amt,0);if(!tot)return`<div class="c"><div class="shd"><div class="sh2"><span class="hic">${ic('fund',2)}</span>이사 자금</div><a data-a="go" data-p="fund">입력하기 ›</a></div><p class="sb" style="margin:4px 0 0">계약금·잔금 같은 보낼 돈을 입력하면 총 필요 금액과 부족한 돈을 보여 드려요.</p></div>`;
+function fsum(){const R=rows(),O=R.filter(r=>r.io==='out'),tot=O.reduce((a,r)=>a+r.amt,0);if(!tot)return`<div class="c"><div class="shd"><div class="sh2"><span class="hic">${ic('fund',2)}</span>이사 자금</div><a data-a="go" data-p="fund">입력하기 ›</a></div><p class="sb" style="margin:4px 0 0">집 값을 넣으면 이사에 드는 돈과 모자란 돈을 보여 드려요.</p></div>`;
 const paid=O.filter(r=>r.dn).reduce((a,r)=>a+r.amt,0),have=S.banks.reduce((a,b)=>a+b.amt,0),inc=R.filter(r=>r.io==='in'&&!r.dn).reduce((a,r)=>a+r.amt,0),k=lack(have,R);
 let left=tot;const seg=[paid,have,inc].map(v=>{const x=Math.min(v,left);left-=x;return x});seg.push(left);
-const C=['#3D5AFE','#0E9F6E','#F5B83D','#F2B8B2'],N=['낸 돈','보유','받을 돈','모자람'],pc=v=>v/tot*100;
-const top=[...O].sort((a,b)=>b.amt-a.amt).slice(0,3);
+const C=['#3D5AFE','#0E9F6E','#F5B83D','#F2B8B2'],N=['낸 돈','내 통장','들어올 돈','모자란 돈'],pc=v=>v/tot*100;
 return`<div class="c"><div class="shd"><div class="sh2"><span class="hic">${ic('fund',2)}</span>이사 자금</div><a data-a="go" data-p="fund">자세히 보기 ›</a></div>
-<div class="fs-top"><div><small>총 필요 금액</small><span class="fs-num">${won(tot)}</span></div><span class="fs-gap ${k.gap?'':'ok'}">${k.gap?`${won(k.gap)} 부족<span>${md(k.at.d)} ${esc(k.at.n)} 기준</span>`:'충분해요<span>날짜 순서로 계산</span>'}</span></div>
+<div class="fs-top"><div><small>이사에 드는 돈</small><span class="fs-num">${won(tot)}</span></div><span class="fs-gap ${k.gap?'':'ok'}">${k.gap?`${won(k.gap)} 모자라요<span>${md(k.at.d)} ${esc(k.at.n)} 때</span>`:'충분해요<span>날짜 순서로 맞춰 봤어요</span>'}</span></div>
 <div class="fs-bar" role="img" aria-label="${N.map((n,i)=>n+' '+won(seg[i])).join(', ')}">${seg.map((v,i)=>v?`<i style="width:${pc(v)}%;background:${C[i]}"></i>`:'').join('')}</div>
-<div class="fs-lg">${N.map((n,i)=>`<div><i style="background:${C[i]}"></i>${n}<b>${won(seg[i])}</b></div>`).join('')}</div>
-<div class="fs-it"><small>보낼 돈 비중</small>${top.map(r=>`<p><span>${esc(r.n)}</span><u><i style="width:${pc(r.amt)}%"></i></u><b>${won(r.amt)}<em>${Math.round(pc(r.amt))}%</em></b></p>`).join('')}</div></div>`}
-P.home=()=>{const L=vis(),n=L.filter(done).length,pct=Math.round(n/L.length*100),cs=curStg(),T=L.filter(e=>sof(e)===cs.k),td=T.filter(done).length,d=dday();
+<div class="fs-lg">${N.map((n,i)=>`<div><i style="background:${C[i]}"></i>${n}<b>${won(seg[i])}</b></div>`).join('')}</div></div>`}
+P.home=()=>{const L=vis(),n=L.filter(done).length,pct=Math.round(n/L.length*100),cs=curStg(),T=L.filter(e=>sof(e)===cs.k),td=T.filter(done).length,U=T.filter(e=>!done(e)),d=dday();
 return`<div class="top"><div class="logo">${LOGO}24dday</div><div class="row" style="gap:8px">
 <button class="inv" data-a="inv" aria-label="일정 함께 관리할 사람 초대하기"><span class="ip">${ic('uplus',2)}</span><span>공유 <b>${S.pp.length}</b>명 참여중</span></button>
 <button class="bell ${S.bell?'':'off'}" data-a="ntl" aria-label="알림 목록${S.bell?'':' (알림 꺼짐)'}">${S.bell&&notes().filter(n=>!S.rd[n.k]).length?`<span class="nd">${notes().filter(n=>!S.rd[n.k]).length}</span>`:''}${S.bell?ic('bell',2):BELLOFF}</button></div></div>
@@ -582,11 +574,11 @@ return`<div class="top"><div class="logo">${LOGO}24dday</div><div class="row" st
 <div class="pc"><span>진행률</span><b>${pct}%</b></div><div class="yb"><i style="width:${pct}%"></i></div>
 ${metro()}</div>
 <div class="c"><div class="shd"><div class="sh2"><span class="ti sm yl">${BOLT}</span>지금 챙길 일</div><span class="cnt cur">${td}/${T.length}</span></div>
-${T.map(e=>`<div class="li">${cb(e)}<div><div class="nm ${done(e)?'dnx':''}">${esc(e.n)}</div><small>${md(dt(e))} · ${when(e)}</small></div>${bd(e.w)}</div>`).join('')}</div>
+${U.slice(0,3).map(e=>`<div class="li">${cb(e)}<div><div class="nm">${esc(e.n)}</div><small>${md(dt(e))} · ${when(e)}</small></div>${bd(e.w)}</div>`).join('')||'<p class="sb">이번 단계 할 일을 모두 끝냈어요.</p>'}${U.length>3?`<a class="more" data-a="go" data-p="tl">남은 ${U.length-3}개 더 보기 ›</a>`:''}</div>
 ${fsum()}<div class="c"><div class="shd" style="margin-bottom:14px"><div class="sh2"><span class="hic">${ic('tl',2)}</span>단계별 주요일정</div><a data-a="go" data-p="tl">자세히 보기 ›</a></div>
-<div class="stl">${SG().map(g=>{const G=L.filter(e=>sof(e)===g.k),st=stS(g),pay=rows().filter(r=>r.ev===g.m&&r.io==='out').reduce((a,r)=>a+r.amt,0),K=G.filter(e=>!e.big),nm=g.n.replace(' 단계','');
+<div class="stl">${SG().map(g=>{const G=L.filter(e=>sof(e)===g.k),st=stS(g),pay=rows().filter(r=>r.ev===g.m&&r.io==='out').reduce((a,r)=>a+r.amt,0),K=G.filter(e=>!e.big);
 return`<button class="sc ${st}" data-a="go" data-p="tl"><div class="row sp">${stTag(g,st)}<span class="sa">${pay?won(pay):''}</span></div>
-<b>${esc(K.slice(0,3).map(e=>e.n.replace(/ (송금|보내기|받기|비교|확인|알아보기)$/,'')).join(' · '))}${K.length>3?` 외 ${K.length-3}개`:''}</b><small>${md(dt(G[0]))} ~ ${md(dt(G[G.length-1]))} · 할 일 ${G.filter(done).length}/${G.length}</small></button>`}).join('')}</div></div>`};
+<b>${esc(K.slice(0,3).map(e=>e.n.replace(/ \(.*\)$/,'').replace(/ (송금|보내기|받기|비교|확인|알아보기)$/,'')).join(' · '))}${K.length>3?` 외 ${K.length-3}개`:''}</b><small>${md(dt(G[0]))} ~ ${md(dt(G[G.length-1]))} · 할 일 ${G.filter(done).length}/${G.length}</small></button>`}).join('')}</div></div>`};
 
 const docs=()=>S.docs.map((d,i)=>({d,i})).filter(x=>ok({t:x.d[4]}));
 P.tl=()=>{const L=vis(),dc=S.sub==='docs',D=docs();
@@ -602,24 +594,24 @@ ${T.map(e=>`<div class="li">${cb(e)}<div><div class="nm ${done(e)?'dnx':''}">${e
 
 P.fund=()=>{const R=rows(),tot=S.banks.reduce((a,b)=>a+b.amt,0),k=lack(tot,R),L=S.leave,gapD=L.t?Math.round((ld()-S.base)/DAY):0,
 nl=R.filter(r=>!r.dn&&r.io==='in'&&!r.lv).reduce((a,r)=>a+r.amt,0);
-return`<div class="hd"><div><h2>자금</h2><p class="sb" style="margin:6px 0 0">보낼 돈과 받을 돈을 날짜 순서로 계산해요</p></div></div><div style="padding:14px 16px 0"><div class="dk">${housePrice(R)?`<small style="display:block;margin-bottom:10px">${RT()?'보증금':'집 값'} <b>${won(housePrice(R))}</b> · 계약금${RT()?'':'·중도금'}·잔금을 더한 금액</small>`:''}<small>앞으로 보낼 돈 (필요 금액)</small><div style="font-size:30px;font-weight:800">${won(k.need)}</div>
+return`<div class="hd"><div><h2>자금</h2><p class="sb" style="margin:6px 0 0">낼 돈과 들어올 돈을 날짜 순서로 맞춰 봐요</p></div></div><div style="padding:14px 16px 0"><div class="dk">${housePrice(R)?`<small style="display:block;margin-bottom:10px">${RT()?'보증금':'집 값'} <b>${won(housePrice(R))}</b> · 계약금${RT()?'':'·중도금'}·잔금을 더한 금액</small>`:''}<small>앞으로 낼 돈</small><div style="font-size:30px;font-weight:800">${won(k.need)}</div>
 <div class="bar" style="margin:14px 0 8px;height:10px;background:rgba(255,255,255,.18)"><i style="width:${k.need?Math.min(tot/k.need*100,100):0}%;background:var(--ok)"></i><i style="width:${k.need?Math.min(k.inc/k.need*100,100):0}%;background:var(--gold)"></i></div>
-<div class="row sp"><small class="lg2"><i style="background:var(--ok)"></i>보유 ${won(tot)}</small><small class="lg2"><i style="background:var(--gold)"></i>받을 돈 ${won(k.inc)}</small></div>
-<span class="lack ${k.gap?'':'ok'}">${k.gap?`${won(k.gap)} 부족 <em>${md(k.at.d)} ${esc(k.at.n)}</em>`:k.need?'충분해요':'입출금 금액을 입력해 주세요'}</span></div></div>
-<div class="c"><div class="shd"><div class="sh2">통장별 보유액 <small style="font-weight:500">(만원)</small></div><button class="pb" data-a="recalc">다시 계산</button></div>${S.banks.map((b,i)=>`<div class="brow"><input data-bn="${i}" value="${esc(b.n)}" aria-label="통장 ${i+1} 이름" placeholder="은행 이름"><input type="number" min="0" inputmode="numeric" data-ba="${i}" value="${b.amt}" aria-label="${esc(b.n)} 보유액(만원)"><button class="bo dl" data-a="bdel" data-i="${i}" aria-label="${esc(b.n)} 삭제">삭제</button></div>`).join('')}<button class="btn lv" data-a="badd">+ 통장 추가</button><p class="sb" style="margin:14px 0 0">완료한 돈은 계산에서 빠지니 보유액도 지금 금액으로 고쳐 주세요. 계좌 자동 연결은 다음 버전에서 만나요.</p></div>
-<div class="c"><div class="shd"><div class="sh2">입출금 계획</div><button class="pb" data-a="pedit" data-id="">+ 추가</button></div>${R.map(r=>`<div class="li"><div><small style="font-weight:700;color:var(--pd)">${md(r.d)} · ${r.io==='in'?'받음':'보냄'}${r.dn?' · 완료':''}</small><div class="nm ${r.dn?'dnx':''}">${esc(r.n)}${r.bank?' · '+esc(r.bank):''}</div><small>${r.amt?won(r.amt):'금액을 입력해 주세요'}</small></div>${r.w?bd(r.w):''}<button class="bo" ${r.lv?'data-a="lve"':`data-a="pedit" data-id="${r.id}"`} aria-label="${esc(r.n)} 수정">수정</button></div>`).join('')}</div>
+<div class="row sp"><small class="lg2"><i style="background:var(--ok)"></i>통장 ${won(tot)}</small><small class="lg2"><i style="background:var(--gold)"></i>들어올 돈 ${won(k.inc)}</small></div>
+<span class="lack ${k.gap?'':'ok'}">${k.gap?`<em>${md(k.at.d)} ${esc(k.at.n)} 때</em> ${won(k.gap)} 모자라요`:k.need?'돈이 충분해요':'집 값이나 낼 돈을 넣어 주세요'}</span></div></div>
+<div class="c"><div class="shd"><div class="sh2">통장에 있는 돈 <small style="font-weight:500">(만원)</small></div><button class="pb" data-a="recalc">다시 계산</button></div>${S.banks.map((b,i)=>`<div class="brow"><input data-bn="${i}" value="${esc(b.n)}" aria-label="통장 ${i+1} 이름" placeholder="은행 이름"><input type="number" min="0" inputmode="numeric" data-ba="${i}" value="${b.amt}" aria-label="${esc(b.n)} 보유액(만원)"><button class="bo dl" data-a="bdel" data-i="${i}" aria-label="${esc(b.n)} 삭제">삭제</button></div>`).join('')}<button class="btn lv" data-a="badd">+ 통장 추가</button><p class="sb" style="margin:14px 0 0">돈을 내고 나면 통장 금액도 지금 금액으로 고쳐 주세요.</p></div>
+<div class="c"><div class="shd"><div class="sh2">돈 나가고 들어오는 날</div><button class="pb" data-a="pedit" data-id="">+ 추가</button></div>${R.map(r=>`<div class="li"><div><small style="font-weight:700;color:var(--pd)">${md(r.d)} · ${r.io==='in'?'들어옴':'나감'}${r.dn?' · 끝':''}</small><div class="nm ${r.dn?'dnx':''}">${esc(r.n)}${r.bank?' · '+esc(r.bank):''}</div><small>${r.amt?won(r.amt):'금액을 입력해 주세요'}</small></div>${r.w?bd(r.w):''}<button class="bo" ${r.lv?'data-a="lve"':`data-a="pedit" data-id="${r.id}"`} aria-label="${esc(r.n)} 수정">수정</button></div>`).join('')}</div>
 <div class="c"><div class="shd"><div class="sh2">집에서 집으로</div><button class="bo" data-a="lve">${L.t?'수정':'나가는 집 추가'}</button></div>
 ${L.t?`${gapD>0?`<div class="wr" style="margin:0 0 8px">받는 날(${md(ld())})이 보내는 날(${md(S.base)})보다 ${gapD}일 늦어요. 그 사이 돈이 비어요.</div>`:gapD===0?'<p class="sb">같은 날이에요. 돈을 받은 뒤에 보낼 수 있어요.</p>':''}
 <div class="kv"><span>① ${md(ld())} 나가는 집에서 받기</span><b>${won(L.get)}</b></div><div class="kv"><span>② 기존 대출 갚기</span><b>- ${won(L.loan)}</b></div><div class="kv"><span>③ 남는 돈</span><b class="${L.get<L.loan?'miss':''}">${L.get<L.loan?'- ':''}${won(Math.abs(L.get-L.loan))}</b></div><div class="kv"><span>④ 내 통장 + 새로 받을 돈</span><b>+ ${won(tot+nl)}</b></div><div class="kv"><span>⑤ 들어갈 집 등에 보낼 돈</span><b>- ${won(k.need-(R.find(r=>r.id==='lloan').dn?0:L.loan))}</b></div><p class="sb" style="margin:8px 0 0">끝난 일로 체크한 돈은 ④⑤ 계산에서 빠져요.</p>`:'<p class="sb">지금 사는 집을 팔거나 보증금을 돌려받아 새 집에 보탠다면 추가해 주세요.</p>'}</div>`};
 
 P.svc=()=>{const v=SV[S.svc];
-return`<div class="hd"><div><h2>서비스</h2><p class="sb" style="margin:6px 0 0">조건을 고르고 다시 계산을 누르면 예상 견적이 나와요</p></div></div>
+return`<div class="hd"><div><h2>서비스</h2><p class="sb" style="margin:6px 0 0">조건을 고르면 예상 견적이 바로 나와요</p></div></div>
 <div class="seg2" role="tablist">${SO.map(k=>`<button class="${k===S.svc?'sel':''}" role="tab" aria-selected="${k===S.svc}" data-a="svc" data-k="${k}">${SV[k].sn}</button>`).join('')}</div>
-<div class="eb"><div class="row sp"><b>${v.n} 예상 견적</b><button class="hbt rc" data-a="qcalc">${ic('re',2.2)}다시 계산</button></div>
-<div class="ep" id="est" style="margin-top:14px"></div><div class="el"></div><button class="hbt" style="margin-bottom:6px;min-height:44px" data-a="qfund">예상 상한을 자금에 담기</button><small style="margin-top:10px">조건을 바꾼 뒤 다시 계산을 눌러 주세요. 실제 금액은 상담으로 확인해요.</small></div>
+<div class="eb"><b>${v.n} 예상 견적</b>
+<div class="ep" id="est" style="margin-top:14px"></div><div class="el"></div><button class="hbt" style="margin-bottom:6px;min-height:44px" data-a="qfund">자금 계획에 넣기</button><small style="margin-top:10px">참고용이에요. 실제 금액은 상담으로 확인해요.</small></div>
 <div class="c" style="border-top:0;padding-top:4px">${v.f.map(f=>f[2]==='n'?`<label>${f[1]}</label><input type="number" inputmode="numeric" data-q="${f[0]}" value="${S.q[f[0]]}">`:f[2]==='m'?`<label>${f[1]}</label><div class="chips">${f[3].map(o=>`<button class="${S.q[f[0]].includes(o)?'on':''}" data-a="qm" data-k="${f[0]}" data-v="${o}" aria-pressed="${S.q[f[0]].includes(o)}">${o}</button>`).join('')}</div>`:`<label>${f[1]}</label><select data-q="${f[0]}">${f[3].map(o=>`<option ${S.q[f[0]]===o?'selected':''}>${o}</option>`).join('')}</select>`).join('')}<label>희망 날짜</label><input type="date" data-q="dt" value="${S.q.dt}"></div>
 <div class="c"><div class="sh2" style="margin-bottom:12px">추천 업체</div>${VN[S.svc].map((x,i)=>`<div class="vc"><img class="vp" src="${IMG[S.svc+i]}" alt="${x[0]} 사진" loading="lazy"><div><div class="row" style="gap:8px;flex-wrap:wrap"><b>${x[0]}</b><span class="ch">평점 ${['4.9','4.8','4.6'][i]}</span></div><small>${x[1]}</small><div class="vt">${x[2]}</div></div><button class="bo" style="background:var(--lav);color:var(--pd)" data-a="msg" data-v="${x[0]}">상담 신청</button></div>`).join('')}</div>
-<div class="c"><b style="font-size:17px">${v.n} 업체이신가요?</b><p class="sb" style="margin:6px 0 0">24dday에 업체를 등록하면 이사 준비 중인 고객에게 견적을 보낼 수 있어요.</p><button class="btn" data-a="reg">+ 업체 등록 문의하기</button></div>`};
+<div class="c"><a class="more" style="margin-top:0" data-a="reg">${v.n} 업체이신가요? 등록 문의하기 ›</a></div>`};
 
 P.my=()=>{const me=S.pp[0],L=vis(),mine=L.filter(e=>e.w==='me'),md2=mine.filter(done).length,O=S.pp.slice(1);
 return`<div class="hd"><h2>마이페이지</h2></div>
@@ -670,9 +662,9 @@ nv.style.display=o?'none':'flex';nv.style.setProperty('--i',pi);
 nv.innerHTML=(ni<0?'':`<span class="nbump" aria-hidden="true"><svg viewBox="0 0 150 32" preserveAspectRatio="none"><path d="M0 32C20 32 28 29 37 21C47 11 58 1 75 1S103 11 113 21C122 29 130 32 150 32V33H0Z" fill="#0F1B2D"/></svg><i></i></span>`)+T.map((t,k)=>`<button class="${k===pi?'on':''}" data-a="go" data-p="${t[0]}"${k===ni?' aria-current="page"':''}>${ic(t[0])}${t[1]}</button>`).join('');
 if(pi!==ni&&ni>=0)requestAnimationFrame(()=>requestAnimationFrame(()=>{nv.style.setProperty('--i',ni);nv.querySelectorAll('button').forEach((b,k)=>b.classList.toggle('on',k===ni))}));
 if(S.pg==='svc')est();sheet()}
-function est(){const v=SV[S.svc];if(!S.qp||!S.qe)S.qe=v.c(S.q);const[a,b]=S.qe;$('#est').textContent=a?mny(a).replace('원','')+'~'+mny(b):'범위를 골라 주세요';
+function est(){const v=SV[S.svc];S.qe=v.c(S.q);const[a,b]=S.qe;$('#est').textContent=a?mny(a).replace('원','')+'~'+mny(b):'범위를 골라 주세요';
 }
-function openSvc(k){S.qe=null;S.qp=0;const v=SV[k];S.svc=k;S.q={dt:iso(dt(E(v.e)))};v.f.forEach(f=>S.q[f[0]]=f[2]==='n'?f[3]:f[2]==='m'?[...f[4]]:f[3][0]);S.pg='svc'}
+function openSvc(k){S.qe=null;const v=SV[k];S.svc=k;S.q={dt:iso(dt(E(v.e)))};v.f.forEach(f=>S.q[f[0]]=f[2]==='n'?f[3]:f[2]==='m'?[...f[4]]:f[3][0]);S.pg='svc'}
 const LINK='https://24dday.app/invite/jamsil-jeongja';
 function act(a,d){
 if(a==='go'){S.pg=d.p;if(d.p==='auth')S.em=0;if(d.p==='svc'&&!S.svc)openSvc('lw');if(d.s)S.sub=d.s;S.sh=null;$('#scr').scrollTop=0}
@@ -718,7 +710,7 @@ else if(a==='inv')S.sh={t:'inv'};
 else if(a==='share'){const data={title:'24dday 이사 일정',text:'우리 이사 일정을 24dday에서 같이 관리해요',url:LINK};
  if(navigator.share){navigator.share(data).catch(()=>{});return}S.sh=null;toast('메시지 앱으로 초대 링크를 보내요 (시연)')}
 else if(a==='copy'){try{navigator.clipboard.writeText(LINK).catch(()=>{})}catch(_){}S.sh=null;toast('초대 링크를 복사했어요')}
-else if(a==='chk'){const e=E(d.id),g0=curStg();e.dn=!done(e);if(e.dn){const g1=curStg();if(g1!==g0&&S.bell&&S.nt.stg)setTimeout(()=>banner({ic:'key',t:`${g0.n}를 모두 마쳤어요`,b:`이제 ${g1.n}예요. 다음 할 일이 열렸어요.`}),50);else toast(e.n+' 완료')}}
+else if(a==='chk'){const e=E(d.id),g0=curStg();e.dn=!done(e);if(e.dn){const g1=curStg();if(g1!==g0&&S.bell&&S.nt.stg)setTimeout(()=>banner({ic:'key',t:`'${g0.n}' 단계를 모두 마쳤어요`,b:`이제 '${g1.n}' 차례예요. 다음 할 일이 열렸어요.`}),50);else toast(e.n+' 완료')}}
 else if(a==='edit')S.sh={t:'ev',id:d.id};
 else if(a==='save'){const e=E(d.id),n=Date.parse($('#ed').value);if(n&&n!==dt(e)){e.f=n;delete e.auto}e.w=$('#ew').value;e.dn=$('#edn').checked;S.sh=null;toast('저장했어요')}
 else if(a==='edel')S.sh={t:'edel',id:d.id};
@@ -737,8 +729,7 @@ else if(a==='pdel')S.sh={t:'pdel',id:d.id};
 else if(a==='pdx'){const p=S.pp.find(q=>q.id===d.id);S.ev.forEach(e=>{if(e.w===d.id)e.w='me'});S.money.forEach(m=>{if(m.w===d.id)m.w='me'});S.docs.forEach(x=>{if(x[2]===d.id)x[2]='me'});S.pp=S.pp.filter(q=>q.id!==d.id);S.sh=null;toast(p.n+'님을 삭제했어요')}
 else if(a==='doc')S.docs[+d.i][1]^=1;
 else if(a==='svc')openSvc(d.k);
-else if(a==='qm'){const L=S.q[d.k],i=L.indexOf(d.v);i<0?L.push(d.v):L.splice(i,1);S.qp=1}
-else if(a==='qcalc'){S.qp=0;toast('예상 견적을 다시 계산했어요')}
+else if(a==='qm'){const L=S.q[d.k],i=L.indexOf(d.v);i<0?L.push(d.v):L.splice(i,1)}
 else if(a==='msg')S.sh={t:'msg',v:d.v};
 else if(a==='call')S.sh={t:'call',v:d.v};
 else if(a==='reg')S.sh={t:'reg'};
@@ -751,7 +742,7 @@ document.addEventListener('click',e=>{const t=e.target.closest('[data-a]');if(!t
 if(a==='go'&&d.p==='auth'&&S.pg==='intro'&&!matchMedia('(prefers-reduced-motion:reduce)').matches){const l=document.querySelector('.land.in');if(l){if(l.classList.contains('leave'))return;l.classList.add('leave');setTimeout(()=>{if(S.pg==='intro')act(a,d)},700);return}}
 act(a,d)});
 document.addEventListener('change',e=>{const t=e.target,n=Date.parse(t.value);if(n&&t.id==='ob')S.base=n;if(n&&t.id==='old')S.leave.d=n});
-document.addEventListener('input',e=>{const t=e.target;if(t.dataset.bn){S.banks[t.dataset.bn].n=t.value;save()}if(t.dataset.ba){S.banks[t.dataset.ba].amt=num(t.value);save()}if(t.id==='opr'){S.price=num(t.value);$('#oprw').textContent=S.price?'= '+won(S.price):''}if(t.dataset.q){S.q[t.dataset.q]=t.type==='number'?+t.value:t.value}});
+document.addEventListener('input',e=>{const t=e.target;if(t.dataset.bn){S.banks[t.dataset.bn].n=t.value;save()}if(t.dataset.ba){S.banks[t.dataset.ba].amt=num(t.value);save()}if(t.id==='opr'){S.price=num(t.value);$('#oprw').textContent=S.price?'= '+won(S.price):''}if(t.dataset.q){S.q[t.dataset.q]=t.type==='number'?+t.value:t.value;if(S.pg==='svc')est()}});
 {const d=read();if(d&&!d.out)load()}
 render();if(LOCK)toast('저장된 기록을 읽지 못했어요. 원본은 그대로 두었어요');
 </script></body></html>
