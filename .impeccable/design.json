@@ -1,0 +1,539 @@
+{
+ "schemaVersion": 2,
+ "generatedAt": "2026-11-25T10:44:27.419384+00:00",
+ "title": "Design System: 24dday",
+ "extensions": {
+  "colorMeta": {
+   "violet-primary": {
+    "role": "primary",
+    "displayName": "바이올렛",
+    "canonical": "#7A4DFF",
+    "tonalRamp": [
+     "#190C40",
+     "#270E71",
+     "#350BB2",
+     "#4000FF",
+     "#7348F5",
+     "#A389F1",
+     "#CCBFF3",
+     "#EEEBFA"
+    ]
+   },
+   "violet-deep": {
+    "role": "primary",
+    "displayName": "딥 바이올렛",
+    "canonical": "#4B2BBF",
+    "tonalRamp": [
+     "#1D1637",
+     "#2E215F",
+     "#402A93",
+     "#522FD0",
+     "#7F67D5",
+     "#AA9CDE",
+     "#CFC8E9",
+     "#F0EDF7"
+    ]
+   },
+   "violet-deepest": {
+    "role": "primary",
+    "displayName": "가장 진한 바이올렛",
+    "canonical": "#3A1C9C",
+    "tonalRamp": [
+     "#1D1438",
+     "#2D1D62",
+     "#402498",
+     "#5027D8",
+     "#7E62DA",
+     "#A999E1",
+     "#CFC7EB",
+     "#EFEDF8"
+    ]
+   },
+   "lavender-wash": {
+    "role": "primary",
+    "displayName": "라벤더 워시",
+    "canonical": "#F1ECFF",
+    "tonalRamp": [
+     "#1A0C40",
+     "#280E71",
+     "#370BB2",
+     "#4300FF",
+     "#7548F5",
+     "#A489F1",
+     "#CCBFF3",
+     "#EFEBFA"
+    ]
+   },
+   "hero-violet-start": {
+    "role": "primary",
+    "displayName": "히어로 보라(시작)",
+    "canonical": "#5425A8",
+    "tonalRamp": [
+     "#221637",
+     "#37205F",
+     "#4F2994",
+     "#682ED1",
+     "#8E67D5",
+     "#B39BDE",
+     "#D4C8E9",
+     "#F1EDF7"
+    ]
+   },
+   "hero-violet-mid": {
+    "role": "primary",
+    "displayName": "히어로 보라(가운데)",
+    "canonical": "#713BE1",
+    "tonalRamp": [
+     "#201339",
+     "#331B64",
+     "#49219C",
+     "#5F22DD",
+     "#885FDE",
+     "#AF97E3",
+     "#D2C6EC",
+     "#F0EDF8"
+    ]
+   },
+   "hero-violet-end": {
+    "role": "primary",
+    "displayName": "히어로 보라(끝)",
+    "canonical": "#9564EF",
+    "tonalRamp": [
+     "#20113C",
+     "#341868",
+     "#4A1BA2",
+     "#6118E7",
+     "#8958E4",
+     "#B092E7",
+     "#D2C3EE",
+     "#F0ECF8"
+    ]
+   },
+   "night-plum": {
+    "role": "neutral",
+    "displayName": "야간 플럼",
+    "canonical": "#2B1252",
+    "tonalRamp": [
+     "#231537",
+     "#39205F",
+     "#532994",
+     "#6E2ED1",
+     "#9267D5",
+     "#B59BDE",
+     "#D5C8EA",
+     "#F1EDF7"
+    ]
+   },
+   "mist-lilac-top": {
+    "role": "neutral",
+    "displayName": "라일락 안개(위)",
+    "canonical": "#EEE4FF",
+    "tonalRamp": [
+     "#1F0C40",
+     "#330E71",
+     "#490BB2",
+     "#5E00FF",
+     "#8848F5",
+     "#AF89F1",
+     "#D2BFF3",
+     "#F0EBFA"
+    ]
+   },
+   "mist-lilac-mid": {
+    "role": "neutral",
+    "displayName": "라일락 안개(가운데)",
+    "canonical": "#DCC8FF",
+    "tonalRamp": [
+     "#1F0C40",
+     "#320E71",
+     "#480BB2",
+     "#5D00FF",
+     "#8748F5",
+     "#AF89F1",
+     "#D2BFF3",
+     "#F0EBFA"
+    ]
+   },
+   "mist-lilac-end": {
+    "role": "neutral",
+    "displayName": "라일락 안개(끝)",
+    "canonical": "#F1DDFF",
+    "tonalRamp": [
+     "#2B0C40",
+     "#480E71",
+     "#6D0BB2",
+     "#9600FF",
+     "#AD48F5",
+     "#C689F1",
+     "#DDBFF3",
+     "#F4EBFA"
+    ]
+   },
+   "ink-plum": {
+    "role": "neutral",
+    "displayName": "잉크 플럼",
+    "canonical": "#29184D",
+    "tonalRamp": [
+     "#211934",
+     "#36265A",
+     "#4F338A",
+     "#683DC2",
+     "#8E71CB",
+     "#B3A1D8",
+     "#D4CBE6",
+     "#F1EEF6"
+    ]
+   },
+   "ink-plum-soft": {
+    "role": "neutral",
+    "displayName": "잉크 플럼 소프트",
+    "canonical": "#4F3F6B",
+    "tonalRamp": [
+     "#241F2D",
+     "#3C334D",
+     "#584974",
+     "#765EA0",
+     "#9888B4",
+     "#B9AFCA",
+     "#D7D2E0",
+     "#F2F0F4"
+    ]
+   },
+   "dusk-gray": {
+    "role": "neutral",
+    "displayName": "더스크 그레이",
+    "canonical": "#73658D",
+    "tonalRamp": [
+     "#25222B",
+     "#3D3848",
+     "#5A516C",
+     "#796A95",
+     "#9A90AC",
+     "#BAB4C5",
+     "#D7D4DD",
+     "#F2F1F4"
+    ]
+   },
+   "faded-lilac": {
+    "role": "neutral",
+    "displayName": "빛바랜 라일락",
+    "canonical": "#A497BD",
+    "tonalRamp": [
+     "#24202C",
+     "#3C354B",
+     "#584C71",
+     "#77639C",
+     "#988BB1",
+     "#B9B1C8",
+     "#D7D3DF",
+     "#F2F1F4"
+    ]
+   },
+   "lilac-tint": {
+    "role": "neutral",
+    "displayName": "라일락 틴트",
+    "canonical": "#F1ECFA",
+    "tonalRamp": [
+     "#221736",
+     "#38235D",
+     "#502E8F",
+     "#6A35CA",
+     "#906CD1",
+     "#B49EDB",
+     "#D4C9E8",
+     "#F1EEF7"
+    ]
+   },
+   "blossom-pink": {
+    "role": "secondary",
+    "displayName": "블로섬 핑크",
+    "canonical": "#FF8FC0",
+    "tonalRamp": [
+     "#400C23",
+     "#710E3A",
+     "#B20B54",
+     "#FF0070",
+     "#F54893",
+     "#F189B6",
+     "#F3BFD5",
+     "#FAEBF1"
+    ]
+   },
+   "blossom-pink-deep": {
+    "role": "secondary",
+    "displayName": "블로섬 핑크(진함)",
+    "canonical": "#E4579C",
+    "tonalRamp": [
+     "#391326",
+     "#631C3F",
+     "#9B225D",
+     "#DC237E",
+     "#DD609D",
+     "#E297BC",
+     "#ECC6D8",
+     "#F8EDF2"
+    ]
+   },
+   "mint-done": {
+    "role": "tertiary",
+    "displayName": "민트",
+    "canonical": "#6EE3B1",
+    "tonalRamp": [
+     "#153829",
+     "#1E6145",
+     "#269767",
+     "#29D68C",
+     "#64D9A7",
+     "#9AE0C2",
+     "#C7EADB",
+     "#EDF7F3"
+    ]
+   },
+   "green-done": {
+    "role": "tertiary",
+    "displayName": "그린",
+    "canonical": "#12B886",
+    "tonalRamp": [
+     "#113C2F",
+     "#176850",
+     "#1AA37A",
+     "#17E8A9",
+     "#57E5BA",
+     "#92E7CE",
+     "#C3EEE1",
+     "#ECF8F5"
+    ]
+   },
+   "honey-gold": {
+    "role": "tertiary",
+    "displayName": "허니 골드",
+    "canonical": "#FFE17B",
+    "tonalRamp": [
+     "#40350C",
+     "#715B0E",
+     "#B28C0B",
+     "#FFC500",
+     "#F5CD48",
+     "#F1D989",
+     "#F3E7BF",
+     "#FAF6EB"
+    ]
+   },
+   "coral-alert": {
+    "role": "neutral",
+    "displayName": "코랄",
+    "canonical": "#F04452",
+    "tonalRamp": [
+     "#3D1014",
+     "#6A161D",
+     "#A51723",
+     "#EC1325",
+     "#E85560",
+     "#E99098",
+     "#EFC2C6",
+     "#F9ECED"
+    ]
+   },
+   "warn-red-ink": {
+    "role": "neutral",
+    "displayName": "경고 붉은 잉크",
+    "canonical": "#B4161F",
+    "tonalRamp": [
+     "#3B1214",
+     "#66191E",
+     "#A01D25",
+     "#E31C27",
+     "#E25A62",
+     "#E59499",
+     "#EDC4C7",
+     "#F8ECED"
+    ]
+   },
+   "glass-white": {
+    "role": "neutral",
+    "displayName": "유리 화이트",
+    "canonical": "rgba(255,255,255,.78)"
+   }
+  },
+  "typographyMeta": {
+   "display": {
+    "displayName": "Display",
+    "purpose": "히어로 D-day 숫자 하나에만."
+   },
+   "headline": {
+    "displayName": "Headline",
+    "purpose": "시작·로그인 화면의 큰 질문."
+   },
+   "title": {
+    "displayName": "Title",
+    "purpose": "카드 제목."
+   },
+   "body": {
+    "displayName": "Body",
+    "purpose": "입력칸과 일반 문장."
+   },
+   "list-item": {
+    "displayName": "List item",
+    "purpose": "할 일·서류 이름."
+   }
+  },
+  "shadows": [
+   {
+    "name": "glass-card",
+    "value": "0 7px 20px rgba(75,42,119,.07)",
+    "purpose": "기본 유리 카드."
+   },
+   {
+    "name": "current-stage",
+    "value": "0 10px 24px rgba(99,64,189,.16)",
+    "purpose": "일정의 지금 단계 묶음."
+   },
+   {
+    "name": "hero",
+    "value": "0 14px 28px rgba(87,48,149,.28)",
+    "purpose": "히어로·자금 요약 진한 카드."
+   },
+   {
+    "name": "primary-button",
+    "value": "0 8px 18px -10px rgba(93,50,199,.7)",
+    "purpose": "주 버튼 아래 빛."
+   }
+  ],
+  "motion": [
+   {
+    "name": "nav-slide",
+    "value": ".35s cubic-bezier(.3,1.2,.5,1)",
+    "purpose": "하단 메뉴 곡선·동그라미 이동."
+   },
+   {
+    "name": "screen-enter",
+    "value": ".85s cubic-bezier(.22,.8,.24,1)",
+    "purpose": "로그인·시작 화면이 아래에서 떠오름."
+   },
+   {
+    "name": "screen-leave",
+    "value": ".7s cubic-bezier(.4,0,.2,1)",
+    "purpose": "소개 화면이 천천히 사라짐."
+   }
+  ],
+  "breakpoints": [
+   {
+    "name": "app-max",
+    "value": "430px"
+   }
+  ]
+ },
+ "components": [
+  {
+   "name": "Primary Button",
+   "kind": "button",
+   "refersTo": "button-primary",
+   "description": "화면당 하나뿐인 다음 행동.",
+   "html": "<button class=\"ds-btn\">저장하기</button>",
+   "css": ".ds-btn{font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;display:block;width:280px;border:0;border-radius:16px;background:linear-gradient(135deg,#7A4DFF,#5D32C7);color:#fff;font-weight:700;font-size:17px;padding:16px;box-shadow:0 8px 18px -10px rgba(93,50,199,.7);cursor:pointer;transition:transform .15s}.ds-btn:active{transform:scale(.98)}.ds-btn:focus-visible{outline:2px solid #7A4DFF;outline-offset:2px}"
+  },
+  {
+   "name": "Soft Button",
+   "kind": "button",
+   "refersTo": "button-soft",
+   "description": "두 번째 선택.",
+   "html": "<button class=\"ds-btn-soft\">공유자 관리로 가기</button>",
+   "css": ".ds-btn-soft{font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;display:block;width:280px;border:0;border-radius:16px;background:#EEE6FF;color:#5B33E0;font-weight:700;font-size:17px;padding:16px;cursor:pointer}.ds-btn-soft:hover{background:#E4DAFF}.ds-btn-soft:focus-visible{outline:2px solid #7A4DFF;outline-offset:2px}"
+  },
+  {
+   "name": "White Pill Button",
+   "kind": "button",
+   "refersTo": "button-white",
+   "description": "시작·로그인 화면 전용.",
+   "html": "<div class=\"ds-wrap\"><button class=\"ds-btn-wh\">로그인</button></div>",
+   "css": ".ds-wrap{background:linear-gradient(160deg,#EEE4FF,#DCC8FF);padding:20px}.ds-btn-wh{font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;width:260px;height:54px;border-radius:27px;background:#fff;color:#4B2BBF;font-weight:700;font-size:17px;border:1.5px solid rgba(122,77,255,.32);box-shadow:0 10px 20px -12px rgba(122,77,255,.55);cursor:pointer}.ds-btn-wh:focus-visible{outline:2px solid #7A4DFF;outline-offset:2px}"
+  },
+  {
+   "name": "Glass Card with Task",
+   "kind": "card",
+   "refersTo": "card-glass",
+   "description": "기본 카드와 할 일 한 줄.",
+   "html": "<div class=\"ds-bg\"><div class=\"ds-card\"><div class=\"ds-h\">지금 챙길 일</div><div class=\"ds-li\"><span class=\"ds-cb\"></span><div><b>이삿짐센터 견적 비교</b><small>11/5 · D-day</small></div><button class=\"ds-bo\">수정</button></div></div></div>",
+   "css": ".ds-bg{background:linear-gradient(160deg,#EEE4FF,#DCC8FF 52%,#F1DDFF);padding:16px;font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;color:#29184D}.ds-card{background:rgba(255,255,255,.78);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.9);border-radius:22px;padding:18px 16px;box-shadow:0 7px 20px rgba(75,42,119,.07)}.ds-h{font-size:19px;font-weight:700;margin-bottom:8px}.ds-li{display:flex;gap:12px;align-items:center;padding:12px 0}.ds-li>div{flex:1}.ds-li b{display:block;font-size:15px}.ds-li small{font-size:12.5px;color:#73658D}.ds-cb{width:20px;height:20px;border-radius:5px;border:2px solid #A492C2;background:rgba(255,255,255,.7)}.ds-bo{border:0;border-radius:9px;background:#EEE6FF;color:#72519C;padding:7px 11px;font-size:13px;font-weight:600}"
+  },
+  {
+   "name": "Hero D-day Card",
+   "kind": "custom",
+   "refersTo": "hero-card",
+   "description": "D-day, 진행률, 단계 점.",
+   "html": "<div class=\"ds-hero\"><small>11/28 잔금일</small><div class=\"ds-big\">D-23<span>일 남음</span></div><div class=\"ds-bar\"><i></i></div></div>",
+   "css": ".ds-hero{font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;width:320px;border-radius:27px;padding:20px;color:#fff;background:linear-gradient(137deg,#5425A8,#713BE1 54%,#9564EF);box-shadow:0 14px 28px rgba(87,48,149,.28)}.ds-hero small{font-size:14px;opacity:.85}.ds-big{font-size:56px;font-weight:800;letter-spacing:-2px;line-height:1.05}.ds-big span{font-size:20px;font-weight:600;letter-spacing:0;margin-left:6px}.ds-bar{height:10px;border-radius:5px;background:rgba(41,18,94,.4);margin-top:16px;overflow:hidden}.ds-bar i{display:block;width:16%;height:100%;background:#6EE3B1;border-radius:5px}"
+  },
+  {
+   "name": "Stage Tags",
+   "kind": "chip",
+   "refersTo": "stage-tag-current",
+   "description": "단계 상태를 글자로 말하는 꼬리표.",
+   "html": "<div class=\"ds-row\"><span class=\"ds-stg ds-dn\">1단계: 계약금 완료</span><span class=\"ds-stg ds-cur\">2단계: 중도금 단계 (현재)</span><span class=\"ds-stg ds-fu\">3단계: 잔금 단계 (D-23)</span></div>",
+   "css": ".ds-row{display:flex;flex-direction:column;gap:8px;align-items:flex-start;font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;}.ds-stg{border-radius:8px;padding:4px 9px;font-size:13px;font-weight:700}.ds-dn{background:#E6F8F1;color:#12B886}.ds-cur{background:#F1ECFF;color:#4B2BBF}.ds-fu{background:rgba(85,53,139,.12);color:#4F3F6B}"
+  },
+  {
+   "name": "Input Field",
+   "kind": "input",
+   "refersTo": "input-field",
+   "description": "기본 입력칸.",
+   "html": "<label class=\"ds-lb\">이사 갈 집<input class=\"ds-in\" placeholder=\"예: 성남 분당구 정자동\"></label>",
+   "css": ".ds-lb{display:block;width:300px;font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;font-size:14px;font-weight:600;color:#4F3F6B}.ds-in{display:block;width:100%;box-sizing:border-box;margin-top:8px;background:#F1ECFA;border:0;border-radius:12px;padding:14px;font-size:16px;color:#29184D}.ds-in:focus-visible{outline:2px solid #7A4DFF;outline-offset:2px}"
+  },
+  {
+   "name": "Bottom Navigation",
+   "kind": "nav",
+   "refersTo": "bottom-nav",
+   "description": "볼록 곡선과 핑크 동그라미가 선택 탭을 따라가요.",
+   "html": "<nav class=\"ds-nav\"><span class=\"ds-bump\"><svg viewBox=\"0 0 150 32\" preserveAspectRatio=\"none\"><path d=\"M0 32C20 32 28 29 37 21C47 11 58 1 75 1S103 11 113 21C122 29 130 32 150 32V33H0Z\" fill=\"#2B1252\"/></svg><i></i></span><button>홈</button><button class=\"on\">일정</button><button>자금</button><button>서비스</button><button>마이</button></nav>",
+   "css": ".ds-nav{position:relative;display:flex;width:360px;margin-top:40px;background:#2B1252;padding:10px 6px 8px;font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;}.ds-nav button{flex:1;position:relative;z-index:1;border:0;background:none;color:#CDB9F2;font-size:11px;font-weight:600;padding:20px 0 0}.ds-nav button.on{color:#fff;font-weight:700}.ds-bump{position:absolute;top:-23px;left:30%;width:150px;height:24px;margin-left:-75px}.ds-bump svg{width:100%;height:100%;display:block}.ds-bump i{position:absolute;left:50%;top:5px;width:50px;height:50px;margin-left:-25px;border-radius:50%;background:linear-gradient(145deg,#FF9BC8,#E4579C);box-shadow:0 6px 16px rgba(228,87,156,.45)}"
+  }
+ ],
+ "narrative": {
+  "northStar": "든든한 이사 동행",
+  "overview": "24dday는 이사를 준비하는 몇 주 동안 옆에서 \"지금 이것만 하면 돼요\"라고 알려주는 차분한 동반자예요. 화면은 연한 라일락 안개 위에 흰 유리 카드를 띄우고, 정말 중요한 것(D-day, 지금 단계, 필요한 돈)만 진한 보라 카드로 들어 올려요. 장식보다 정보가 먼저 보이고, 한 화면에서 해야 할 행동은 하나예요.\n\n모바일 한 손 사용이 기본이에요. 앱 폭은 최대 430px이고, 카드 사이 리듬은 일정하게 유지해요. 부품은 단정하고 차분해요. 둥근 모서리와 부드러운 그림자로 친근함을 주되, 색과 움직임은 의미가 있을 때만 써요. 상태는 색 하나만으로 알리지 않고 글자와 아이콘을 함께 써요.",
+  "keyCharacteristics": [
+   "연라일락 그라데이션 바탕 + 흰 유리 카드로 구역 나누기",
+   "진한 보라 그라데이션은 히어로·자금 요약·지금 단계에만",
+   "세 가지 상태 색: 초록(끝냄·보유), 노랑(앞으로 들어옴), 핑크(지금·주의)",
+   "진한 보라 하단 메뉴, 선택한 탭 위로 볼록 솟은 곡선과 핑크 동그라미",
+   "쉬운 한국어, 큰 글씨, 넉넉한 누르는 영역"
+  ],
+  "rules": [
+   {
+    "name": "The Three Dots Rule",
+    "body": "상태 색은 세 가지뿐이에요. 초록 = 끝냄·이미 있음, 노랑 = 앞으로 들어옴, 핑크 = 지금·주의. 홈과 자금, 어느 화면에서든 같은 뜻으로 써요.",
+    "section": "Colors"
+   },
+   {
+    "name": "The Quiet Alarm Rule",
+    "body": "빨강은 되돌릴 수 없는 행동과 실제 오류에만 써요. 지난 일, 부족한 돈 같은 안내는 회색 글씨나 작은 핑크 점으로 조용히 알려요.",
+    "section": "Colors"
+   },
+   {
+    "name": "The 14px Floor Rule",
+    "body": "읽어야 하는 문장은 14px 이상이에요. 12.5px는 날짜·부가 정보 한 줄에만 써요.",
+    "section": "Typography"
+   },
+   {
+    "name": "The Three Layers Rule",
+    "body": "한 화면에서 진한 보라 카드는 맨 위 하나(히어로 또는 요약)뿐이에요. 나머지는 유리 카드로 둬야 시선이 흩어지지 않아요.",
+    "section": "Elevation & Depth"
+   }
+  ],
+  "dos": [
+   "**Do** 상태는 The Three Dots Rule의 세 색과 함께 글자로도 적어요(\"완료\", \"날짜 지남\", \"부족\").",
+   "**Do** 진한 보라 카드는 화면 맨 위 하나만 써요.",
+   "**Do** 누르는 영역은 44px 이상으로, 작은 체크칸은 보이지 않는 여백으로 넓혀요.",
+   "**Do** 어려운 용어의 쉬운 설명은 필요할 때 펼쳐 보게 해요(? 버튼, 수정 창).",
+   "**Do** 움직임은 `prefers-reduced-motion`에서 멈춰요."
+  ],
+  "donts": [
+   "**Don't** 안내 문구에 진한 빨강 굵은 글씨를 쓰지 마세요(The Quiet Alarm Rule).",
+   "**Don't** 지금 단계 꼬리표를 진한 핑크로 칠하지 마세요. 연보라 바탕 + 딥 바이올렛이에요.",
+   "**Don't** 빛바랜 라일락(`faded-lilac`)을 읽어야 하는 글씨에 쓰지 마세요.",
+   "**Don't** 쉬운 설명을 목록에 늘 펼쳐 두지 마세요. 글이 많아지면 시선이 흩어져요.",
+   "**Don't** 버튼에 진한 핑크 바탕을 쓰지 마세요. 시작 화면 버튼은 흰 바탕 + 보라 글씨예요."
+  ]
+ }
+}
