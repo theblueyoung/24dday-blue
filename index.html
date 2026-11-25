@@ -210,7 +210,7 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .snsn{text-align:center;font-size:12.5px;color:var(--mute);margin:14px 0 0}
 .emb{display:block;margin:14px auto 0;border:0;background:none;color:var(--sub);font-size:14px;font-weight:600;text-decoration:underline;text-underline-offset:3px}
 /* ── 보라 그라데이션 테마: 연보라 배경 위에 흰 유리 카드로 구역을 나눔 ── */
-:root{--ink:#29184D;--ink2:#4F3F6B;--sub:#73658D;--mute:#A497BD;--ln:rgba(85,53,139,.12);--gy:#F1ECFA;--pink:#FF76AD;--gold:#FFE17B;--glass:rgba(255,255,255,.78)}
+:root{--ink:#29184D;--ink2:#4F3F6B;--sub:#73658D;--mute:#A497BD;--ln:rgba(85,53,139,.12);--gy:#F1ECFA;--pink:#FF8FC0;--gold:#FFE17B;--ok:#6EE3B1;--hdn:var(--ok);--glass:rgba(255,255,255,.78)}
 body{background:radial-gradient(ellipse at 15% 10%,#EDDDFF 0,transparent 35%),radial-gradient(ellipse at 88% 85%,#D7B8FF 0,transparent 32%),linear-gradient(145deg,#B697F2,#8B65DF 48%,#D9BAFF)}
 #app{background:linear-gradient(160deg,#EEE4FF 0%,#DCC8FF 52%,#F1DDFF 100%);box-shadow:0 0 60px rgba(36,15,79,.25)}
 .hd{padding:24px 20px 4px}
@@ -227,8 +227,8 @@ body{background:radial-gradient(ellipse at 15% 10%,#EDDDFF 0,transparent 35%),ra
 /* 히어로 */
 .hero{margin:6px 16px 0;border-radius:27px;background:linear-gradient(137deg,#5425A8 0%,#713BE1 54%,#9564EF 100%);box-shadow:0 14px 28px rgba(87,48,149,.28)}
 .hero::before,.hero::after{background:rgba(255,255,255,.06)}
-.pc b{color:var(--gold)}
-.yb{background:rgba(41,18,94,.4)}.yb i{background:linear-gradient(90deg,#FFE789,#FFB4C9)}
+.pc b{color:var(--ok)}
+.yb{background:rgba(41,18,94,.4)}.yb i{background:var(--ok)}
 .st.cur i{background:var(--pink)}
 /* 버튼 · 칩 · 체크 */
 .btn{background:linear-gradient(135deg,#7A4DFF,#5D32C7);box-shadow:0 8px 18px -10px rgba(93,50,199,.7)}
@@ -304,7 +304,7 @@ nav button.on svg{transform:translateY(-19px);color:#fff}
 .alk{border:0;background:none;padding:4px 2px;color:var(--p);font-size:15px;font-weight:800;text-decoration:underline;text-underline-offset:3px}
 /* 설명 · 놓친 일 · 자금 */
 .li small.ez{display:block;margin-top:3px;color:var(--ink2);line-height:1.4}.miss{color:#B4161F}
-.lack{display:inline-flex;align-items:center;gap:7px;margin-top:12px;background:rgba(255,255,255,.16);color:#fff;border-radius:12px;padding:7px 12px;font-size:14px;font-weight:700}.lack::before{content:"";width:8px;height:8px;border-radius:50%;background:#FF9BC8;flex:none}.lack.ok::before{background:#7BE3B8}.lack em{font-style:normal;font-weight:500;opacity:.85}
+.lack{display:inline-flex;align-items:center;gap:7px;margin-top:12px;background:rgba(255,255,255,.16);color:#fff;border-radius:12px;padding:7px 12px;font-size:14px;font-weight:700}.lack::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--pink);flex:none}.lack.ok::before{background:var(--ok)}.lg2{display:inline-flex;align-items:center;gap:6px;font-weight:600}.lg2 i{width:8px;height:8px;border-radius:50%}.lack em{font-style:normal;font-weight:500;opacity:.85}
 .qi{width:24px;height:24px;border-radius:50%;border:0;padding:0;flex:none;background:#EEE6FF;color:#72519C;font-size:13px;font-weight:800;position:relative}.qi::after{content:"";position:absolute;inset:-10px}.qi.op{background:var(--p);color:#fff}
 .brow{display:flex;gap:8px;align-items:center}.brow input{min-width:0}.brow .bo{margin-top:8px;min-height:44px}
 .kv b{text-align:right}
@@ -530,8 +530,8 @@ ${T.map(e=>`<div class="li">${cb(e)}<div><div class="nm ${done(e)?'dnx':''}">${e
 P.fund=()=>{const R=rows(),tot=S.banks.reduce((a,b)=>a+b.amt,0),k=lack(tot,R),L=S.leave,gapD=L.t?Math.round((ld()-S.base)/DAY):0,
 nl=R.filter(r=>!r.dn&&r.io==='in'&&!r.lv).reduce((a,r)=>a+r.amt,0);
 return`<div class="hd"><div><h2>자금</h2><p class="sb" style="margin:6px 0 0">보낼 돈과 받을 돈을 날짜 순서로 계산해요</p></div></div><div style="padding:14px 16px 0"><div class="dk"><small>앞으로 보낼 돈 (필요 금액)</small><div style="font-size:30px;font-weight:800">${won(k.need)}</div>
-<div class="bar" style="margin:14px 0 8px;height:10px;background:rgba(255,255,255,.18)"><i style="width:${k.need?Math.min(tot/k.need*100,100):0}%;background:#7BE3B8"></i><i style="width:${k.need?Math.min(k.inc/k.need*100,100):0}%;background:#FFD43B"></i></div>
-<div class="row sp"><small style="color:#9DF0CB;font-weight:700">보유 ${won(tot)}</small><small>받을 돈 ${won(k.inc)}</small></div>
+<div class="bar" style="margin:14px 0 8px;height:10px;background:rgba(255,255,255,.18)"><i style="width:${k.need?Math.min(tot/k.need*100,100):0}%;background:var(--ok)"></i><i style="width:${k.need?Math.min(k.inc/k.need*100,100):0}%;background:var(--gold)"></i></div>
+<div class="row sp"><small class="lg2"><i style="background:var(--ok)"></i>보유 ${won(tot)}</small><small class="lg2"><i style="background:var(--gold)"></i>받을 돈 ${won(k.inc)}</small></div>
 <span class="lack ${k.gap?'':'ok'}">${k.gap?`${won(k.gap)} 부족 <em>${md(k.at.d)} ${esc(k.at.n)}</em>`:k.need?'충분해요':'입출금 금액을 입력해 주세요'}</span></div></div>
 <div class="c"><div class="shd"><div class="sh2">통장별 보유액 <small style="font-weight:500">(만원)</small></div><button class="pb" data-a="recalc">다시 계산</button></div>${S.banks.map((b,i)=>`<div class="brow"><input data-bn="${i}" value="${esc(b.n)}" aria-label="통장 ${i+1} 이름" placeholder="은행 이름"><input type="number" min="0" inputmode="numeric" data-ba="${i}" value="${b.amt}" aria-label="${esc(b.n)} 보유액(만원)"><button class="bo dl" data-a="bdel" data-i="${i}" aria-label="${esc(b.n)} 삭제">삭제</button></div>`).join('')}<button class="btn lv" data-a="badd">+ 통장 추가</button><p class="sb" style="margin:14px 0 0">완료한 돈은 계산에서 빠지니 보유액도 지금 금액으로 고쳐 주세요. 계좌 자동 연결은 다음 버전에서 만나요.</p></div>
 <div class="c"><div class="shd"><div class="sh2">입출금 계획</div><button class="pb" data-a="pedit" data-id="">+ 추가</button></div>${R.map(r=>`<div class="li"><div><small style="font-weight:700;color:var(--pd)">${md(r.d)} · ${r.io==='in'?'받음':'보냄'}${r.dn?' · 완료':''}</small><div class="nm ${r.dn?'dnx':''}">${esc(r.n)}${r.bank?' · '+esc(r.bank):''}</div><small>${r.amt?won(r.amt):'금액을 입력해 주세요'}</small></div>${r.w?bd(r.w):''}<button class="bo" ${r.lv?'data-a="lve"':`data-a="pedit" data-id="${r.id}"`} aria-label="${esc(r.n)} 수정">수정</button></div>`).join('')}</div>
