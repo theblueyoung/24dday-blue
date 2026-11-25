@@ -5,11 +5,22 @@ colors:
   violet-primary: "#7A4DFF"
   violet-deep: "#4B2BBF"
   violet-deepest: "#3A1C9C"
+  violet-royal: "#5B33E0"
+  violet-button-end: "#5D32C7"
+  logo-violet: "#6B3FF0"
+  metro-dot-violet: "#6A40EC"
   lavender-wash: "#F1ECFF"
   hero-violet-start: "#5425A8"
   hero-violet-mid: "#713BE1"
   hero-violet-end: "#9564EF"
   night-plum: "#2B1252"
+  splash-violet-top: "#8E67F2"
+  splash-violet-mid: "#6234D0"
+  splash-violet-bottom: "#43199C"
+  page-violet-glow: "#EDDDFF"
+  page-violet-a: "#B697F2"
+  page-violet-b: "#D7B8FF"
+  page-violet-c: "#D9BAFF"
   mist-lilac-top: "#EEE4FF"
   mist-lilac-mid: "#DCC8FF"
   mist-lilac-end: "#F1DDFF"
@@ -17,15 +28,25 @@ colors:
   ink-plum-soft: "#4F3F6B"
   dusk-gray: "#73658D"
   faded-lilac: "#A497BD"
+  plum-chip-ink: "#523579"
+  small-button-ink: "#72519C"
+  field-icon-ink: "#8C7BB0"
+  logo-tile: "#F8F5FF"
+  scrim: "rgba(0,0,0,.45)"
+  progress-track: "rgba(41,18,94,.4)"
   lilac-tint: "#F1ECFA"
   glass-white: "rgba(255,255,255,.78)"
   blossom-pink: "#FF8FC0"
+  blossom-pink-light: "#FF9BC8"
   blossom-pink-deep: "#E4579C"
+  bell-off-border: "#FFD6DC"
   mint-done: "#6EE3B1"
   green-done: "#12B886"
   honey-gold: "#FFE17B"
   coral-alert: "#F04452"
   warn-red-ink: "#B4161F"
+  kakao-yellow: "#FEE500"
+  naver-green: "#03C75A"
 typography:
   display:
     fontFamily: "Pretendard, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif"
@@ -33,6 +54,14 @@ typography:
     fontWeight: 800
     lineHeight: 1.05
     letterSpacing: "-2px"
+  splash-title:
+    fontFamily: "Pretendard, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif"
+    fontSize: "40px"
+    fontWeight: 800
+  amount:
+    fontFamily: "Pretendard, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif"
+    fontSize: "30px"
+    fontWeight: 800
   headline:
     fontFamily: "Pretendard, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif"
     fontSize: "26px"
@@ -42,9 +71,29 @@ typography:
     fontFamily: "Pretendard, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif"
     fontSize: "24px"
     fontWeight: 700
+  stage-number:
+    fontFamily: "Pretendard, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif"
+    fontSize: "22px"
+    fontWeight: 800
+  brand:
+    fontFamily: "Pretendard, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif"
+    fontSize: "21px"
+    fontWeight: 800
+  dday-unit:
+    fontFamily: "Pretendard, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif"
+    fontSize: "20px"
+    fontWeight: 600
   title:
     fontFamily: "Pretendard, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif"
     fontSize: "19px"
+    fontWeight: 700
+  splash-button:
+    fontFamily: "Pretendard, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif"
+    fontSize: "18px"
+    fontWeight: 700
+  button:
+    fontFamily: "Pretendard, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif"
+    fontSize: "17px"
     fontWeight: 700
   body:
     fontFamily: "Pretendard, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif"
@@ -77,10 +126,15 @@ rounded:
   field: "12px"
   button: "16px"
   pill: "18px"
+  toast: "14px"
+  stage-card: "20px"
   card: "22px"
   feature-card: "24px"
   hero: "27px"
   auth-pill: "27px"
+  logo-tile: "29px"
+  splash-ring: "30px"
+  full: "999px"
 spacing:
   xs: "4px"
   sm: "8px"
@@ -95,10 +149,10 @@ components:
     textColor: "#FFFFFF"
     rounded: "{rounded.button}"
     padding: "16px"
-    typography: "{typography.title}"
+    typography: "{typography.button}"
   button-soft:
     backgroundColor: "#EEE6FF"
-    textColor: "#5B33E0"
+    textColor: "{colors.violet-royal}"
     rounded: "{rounded.button}"
     padding: "16px"
   button-white:
@@ -113,7 +167,7 @@ components:
     padding: "16px"
   button-small:
     backgroundColor: "#EEE6FF"
-    textColor: "#72519C"
+    textColor: "{colors.small-button-ink}"
     rounded: "{rounded.chip-small}"
     padding: "7px 11px"
   card-glass:
@@ -188,6 +242,10 @@ components:
 - **야간 플럼** (`night-plum`): 하단 메뉴.
 - **코랄** (`coral-alert`)과 **경고 붉은 잉크** (`warn-red-ink`): 로그아웃·삭제 같은 위험한 행동과 실제 오류에만.
 
+- **스플래시 보라** (`splash-violet-top` → `splash-violet-mid` → `splash-violet-bottom`, 160°): 첫 화면과 소개 화면 바탕.
+- **페이지 보라** (`page-violet-*`): 컴퓨터에서 앱 바깥 바탕.
+- **카카오·네이버 색** (`kakao-yellow`, `naver-green`): 간편 로그인 버튼에만. 브랜드 규정 색이라 바꾸지 않아요.
+
 ### Named Rules
 **The Three Dots Rule.** 상태 색은 세 가지뿐이에요. 초록 = 끝냄·이미 있음, 노랑 = 앞으로 들어옴, 핑크 = 지금·주의. 홈과 자금, 어느 화면에서든 같은 뜻으로 써요.
 
@@ -204,7 +262,10 @@ components:
 - **Display** (800, 56px, 1.05, -2px): 히어로의 D-day 숫자 하나에만.
 - **Headline** (700, 26px, 1.35): 로그인·시작 화면의 큰 질문.
 - **Page title** (700, 24px): 탭 맨 위 제목(일정, 자금…).
-- **Title** (700, 19px): 카드 제목. 버튼 글씨는 17px 700.
+- **Title** (700, 19px): 카드 제목.
+- **Button** (700, 17px; 시작 화면 흰 버튼은 18px): 버튼 글씨.
+- **Brand / Splash** (800, 21px / 40px): 상단 로고 글씨, 첫 화면 앱 이름.
+- **Amount** (800, 30px): 자금 요약의 큰 금액.
 - **Body** (400, 16px, 1.5): 입력칸과 일반 문장.
 - **List item** (600, 15px, 20px): 할 일·서류 이름.
 - **Label** (600, 14px): 입력칸 이름, 날짜, 보조 설명.
@@ -240,7 +301,7 @@ components:
 ### Buttons
 단정하고 차분해요. 화면당 주 버튼은 하나예요.
 - **Shape:** 부드럽게 둥근 모서리(16px), 화면 폭 가득.
-- **Primary:** 바이올렛 그라데이션(135°, `violet-primary` → `#5D32C7`), 흰 글씨 17px 700, 안쪽 여백 16px, 보라 빛 그림자.
+- **Primary:** 바이올렛 그라데이션(135°, `violet-primary` → `violet-button-end`), 흰 글씨 17px 700, 안쪽 여백 16px, 보라 빛 그림자.
 - **Soft:** 연보라 바탕(`#EEE6FF`) + 진한 보라 글씨. 보조 행동(취소가 아닌 두 번째 선택).
 - **White:** 흰 바탕 + 딥 바이올렛 글씨, 54px 높이 알약 모양(27px). 시작·로그인 화면 전용.
 - **Danger:** 코랄 바탕 흰 글씨. 로그아웃·삭제 확인에만.

@@ -1,6 +1,6 @@
 {
  "schemaVersion": 2,
- "generatedAt": "2026-11-25T10:44:27.419384+00:00",
+ "generatedAt": "2026-11-25T10:49:35.797791+00:00",
  "title": "Design System: 24dday",
  "extensions": {
   "colorMeta": {
@@ -353,6 +353,301 @@
     "role": "neutral",
     "displayName": "유리 화이트",
     "canonical": "rgba(255,255,255,.78)"
+   },
+   "violet-royal": {
+    "role": "neutral",
+    "displayName": "violet-royal",
+    "canonical": "#5B33E0",
+    "tonalRamp": [
+     "#1C133A",
+     "#2C1B64",
+     "#3D219C",
+     "#4D22DD",
+     "#7C5EDE",
+     "#A896E3",
+     "#CEC5EC",
+     "#EFEDF8"
+    ]
+   },
+   "violet-button-end": {
+    "role": "neutral",
+    "displayName": "violet-button-end",
+    "canonical": "#5D32C7",
+    "tonalRamp": [
+     "#201736",
+     "#33225D",
+     "#492C90",
+     "#5F33CC",
+     "#886AD2",
+     "#B09EDC",
+     "#D2C9E8",
+     "#F0EEF7"
+    ]
+   },
+   "logo-violet": {
+    "role": "neutral",
+    "displayName": "logo-violet",
+    "canonical": "#6B3FF0",
+    "tonalRamp": [
+     "#1B103D",
+     "#2B166A",
+     "#3B17A6",
+     "#4912ED",
+     "#7954E8",
+     "#A690E9",
+     "#CDC2EF",
+     "#EFECF9"
+    ]
+   },
+   "metro-dot-violet": {
+    "role": "neutral",
+    "displayName": "metro-dot-violet",
+    "canonical": "#6A40EC",
+    "tonalRamp": [
+     "#1B113C",
+     "#2B1768",
+     "#3B1AA3",
+     "#4A17E8",
+     "#7A57E5",
+     "#A792E7",
+     "#CEC3EE",
+     "#EFECF8"
+    ]
+   },
+   "splash-violet-top": {
+    "role": "neutral",
+    "displayName": "splash-violet-top",
+    "canonical": "#8E67F2",
+    "tonalRamp": [
+     "#1D103C",
+     "#2D1669",
+     "#4018A5",
+     "#5014EB",
+     "#7E55E7",
+     "#A991E8",
+     "#CFC3EF",
+     "#EFECF9"
+    ]
+   },
+   "splash-violet-mid": {
+    "role": "neutral",
+    "displayName": "splash-violet-mid",
+    "canonical": "#6234D0",
+    "tonalRamp": [
+     "#201637",
+     "#33215F",
+     "#492A92",
+     "#5F30CF",
+     "#8868D4",
+     "#AF9CDD",
+     "#D2C8E9",
+     "#F0EEF7"
+    ]
+   },
+   "splash-violet-bottom": {
+    "role": "neutral",
+    "displayName": "splash-violet-bottom",
+    "canonical": "#43199C",
+    "tonalRamp": [
+     "#1F1339",
+     "#331C64",
+     "#49229B",
+     "#5E23DC",
+     "#8860DD",
+     "#AF97E2",
+     "#D2C6EC",
+     "#F0EDF8"
+    ]
+   },
+   "page-violet-glow": {
+    "role": "neutral",
+    "displayName": "page-violet-glow",
+    "canonical": "#EDDDFF",
+    "tonalRamp": [
+     "#250C40",
+     "#3D0E71",
+     "#590BB2",
+     "#7800FF",
+     "#9948F5",
+     "#BA89F1",
+     "#D7BFF3",
+     "#F2EBFA"
+    ]
+   },
+   "page-violet-a": {
+    "role": "neutral",
+    "displayName": "page-violet-a",
+    "canonical": "#B697F2",
+    "tonalRamp": [
+     "#20123B",
+     "#341966",
+     "#4A1E9F",
+     "#601CE3",
+     "#895BE1",
+     "#B094E5",
+     "#D2C4ED",
+     "#F0ECF8"
+    ]
+   },
+   "page-violet-b": {
+    "role": "neutral",
+    "displayName": "page-violet-b",
+    "canonical": "#D7B8FF",
+    "tonalRamp": [
+     "#230C40",
+     "#390E71",
+     "#540BB2",
+     "#6F00FF",
+     "#9348F5",
+     "#B689F1",
+     "#D5BFF3",
+     "#F1EBFA"
+    ]
+   },
+   "page-violet-c": {
+    "role": "neutral",
+    "displayName": "page-violet-c",
+    "canonical": "#D9BAFF",
+    "tonalRamp": [
+     "#240C40",
+     "#3B0E71",
+     "#560BB2",
+     "#7300FF",
+     "#9548F5",
+     "#B789F1",
+     "#D6BFF3",
+     "#F1EBFA"
+    ]
+   },
+   "plum-chip-ink": {
+    "role": "neutral",
+    "displayName": "plum-chip-ink",
+    "canonical": "#523579",
+    "tonalRamp": [
+     "#251C30",
+     "#3D2C53",
+     "#5A3E7F",
+     "#784EB1",
+     "#997CC0",
+     "#BAA8D1",
+     "#D7CFE3",
+     "#F2EFF5"
+    ]
+   },
+   "small-button-ink": {
+    "role": "neutral",
+    "displayName": "small-button-ink",
+    "canonical": "#72519C",
+    "tonalRamp": [
+     "#251E2F",
+     "#3E304F",
+     "#5B4479",
+     "#7B57A8",
+     "#9B83B9",
+     "#BBACCD",
+     "#D8D0E1",
+     "#F2F0F5"
+    ]
+   },
+   "field-icon-ink": {
+    "role": "neutral",
+    "displayName": "field-icon-ink",
+    "canonical": "#8C7BB0",
+    "tonalRamp": [
+     "#24202D",
+     "#3B334C",
+     "#574973",
+     "#745FA0",
+     "#9688B4",
+     "#B8B0CA",
+     "#D6D2DF",
+     "#F2F0F4"
+    ]
+   },
+   "logo-tile": {
+    "role": "neutral",
+    "displayName": "logo-tile",
+    "canonical": "#F8F5FF",
+    "tonalRamp": [
+     "#1C0C40",
+     "#2C0E71",
+     "#3D0BB2",
+     "#4C00FF",
+     "#7C48F5",
+     "#A889F1",
+     "#CEBFF3",
+     "#EFEBFA"
+    ]
+   },
+   "scrim": {
+    "role": "neutral",
+    "displayName": "scrim",
+    "canonical": "rgba(0,0,0,.45)"
+   },
+   "progress-track": {
+    "role": "neutral",
+    "displayName": "progress-track",
+    "canonical": "rgba(41,18,94,.4)"
+   },
+   "blossom-pink-light": {
+    "role": "neutral",
+    "displayName": "blossom-pink-light",
+    "canonical": "#FF9BC8",
+    "tonalRamp": [
+     "#400C24",
+     "#710E3B",
+     "#B20B56",
+     "#FF0073",
+     "#F54895",
+     "#F189B8",
+     "#F3BFD6",
+     "#FAEBF1"
+    ]
+   },
+   "bell-off-border": {
+    "role": "neutral",
+    "displayName": "bell-off-border",
+    "canonical": "#FFD6DC",
+    "tonalRamp": [
+     "#400C14",
+     "#710E1D",
+     "#B20B23",
+     "#FF0025",
+     "#F54861",
+     "#F18998",
+     "#F3BFC6",
+     "#FAEBED"
+    ]
+   },
+   "kakao-yellow": {
+    "role": "neutral",
+    "displayName": "kakao-yellow",
+    "canonical": "#FEE500",
+    "tonalRamp": [
+     "#403B0C",
+     "#71670E",
+     "#B2A10B",
+     "#FFE600",
+     "#F5E448",
+     "#F1E689",
+     "#F3EEBF",
+     "#FAF8EB"
+    ]
+   },
+   "naver-green": {
+    "role": "neutral",
+    "displayName": "naver-green",
+    "canonical": "#03C75A",
+    "tonalRamp": [
+     "#0D4023",
+     "#10703A",
+     "#0EAF55",
+     "#04FB72",
+     "#4AF295",
+     "#8AEFB7",
+     "#BFF2D6",
+     "#EBFAF1"
+    ]
    }
   },
   "typographyMeta": {
@@ -375,6 +670,34 @@
    "list-item": {
     "displayName": "List item",
     "purpose": "할 일·서류 이름."
+   },
+   "splash-title": {
+    "displayName": "splash-title",
+    "purpose": ""
+   },
+   "amount": {
+    "displayName": "amount",
+    "purpose": ""
+   },
+   "stage-number": {
+    "displayName": "stage-number",
+    "purpose": ""
+   },
+   "brand": {
+    "displayName": "brand",
+    "purpose": ""
+   },
+   "dday-unit": {
+    "displayName": "dday-unit",
+    "purpose": ""
+   },
+   "splash-button": {
+    "displayName": "splash-button",
+    "purpose": ""
+   },
+   "button": {
+    "displayName": "button",
+    "purpose": ""
    }
   },
   "shadows": [
