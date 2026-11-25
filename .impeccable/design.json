@@ -1,6 +1,6 @@
 {
  "schemaVersion": 2,
- "generatedAt": "2026-11-25T14:12:08.836517+00:00",
+ "generatedAt": "2026-11-25T14:27:16.668777+00:00",
  "title": "Design System: 24dday",
  "extensions": {
   "colorMeta": {
@@ -19,139 +19,124 @@
      "#EEF1F6"
     ]
    },
-   "navy-deep": {
+   "indigo-deep": {
     "role": "primary",
-    "displayName": "navy-deep",
-    "canonical": "#16263D",
+    "displayName": "indigo-deep",
+    "canonical": "#2C45D9",
     "tonalRamp": [
-     "#1A2433",
-     "#293C57",
-     "#375785",
-     "#4475BB",
-     "#7597C7",
-     "#A4B8D5",
-     "#CCD7E5",
-     "#EFF2F6"
+     "#141938",
+     "#1D2762",
+     "#243598",
+     "#2741D8",
+     "#6273DA",
+     "#99A3E1",
+     "#C7CCEB",
+     "#EDEFF8"
     ]
    },
-   "navy-hero-top": {
+   "indigo-hero-top": {
     "role": "primary",
-    "displayName": "navy-hero-top",
-    "canonical": "#1B2E4A",
+    "displayName": "indigo-hero-top",
+    "canonical": "#5068FE",
     "tonalRamp": [
-     "#1A2432",
-     "#293B57",
-     "#385785",
-     "#4474BB",
-     "#7696C6",
-     "#A5B8D5",
-     "#CDD6E5",
-     "#EFF2F6"
+     "#0C1340",
+     "#0F1C71",
+     "#0C23B1",
+     "#0124FE",
+     "#4960F4",
+     "#8997F0",
+     "#BFC6F3",
+     "#EBEDFA"
     ]
    },
-   "navy-primary": {
+   "indigo-primary": {
     "role": "primary",
-    "displayName": "navy-primary",
-    "canonical": "#1F3554",
+    "displayName": "indigo-primary",
+    "canonical": "#3D5AFE",
     "tonalRamp": [
-     "#1A2432",
-     "#293C57",
-     "#385885",
-     "#4576BA",
-     "#7697C6",
-     "#A5B9D5",
-     "#CDD7E5",
-     "#EFF2F6"
+     "#0C1440",
+     "#0F1E71",
+     "#0C25B1",
+     "#0127FE",
+     "#4962F4",
+     "#8999F0",
+     "#BFC7F3",
+     "#EBEDFA"
     ]
    },
-   "navy-raised": {
+   "indigo-splash-bottom": {
     "role": "primary",
-    "displayName": "navy-raised",
-    "canonical": "#22395A",
+    "displayName": "indigo-splash-bottom",
+    "canonical": "#1F2E9E",
     "tonalRamp": [
-     "#1A2432",
-     "#293C56",
-     "#395884",
-     "#4675B9",
-     "#7797C5",
-     "#A5B9D4",
-     "#CDD7E5",
-     "#EFF2F6"
+     "#151938",
+     "#1F2661",
+     "#263496",
+     "#2A3ED5",
+     "#6472D8",
+     "#9AA2E0",
+     "#C7CBEA",
+     "#EDEEF7"
     ]
    },
-   "navy-splash-bottom": {
+   "indigo-dot": {
     "role": "primary",
-    "displayName": "navy-splash-bottom",
-    "canonical": "#0B1422",
+    "displayName": "indigo-dot",
+    "canonical": "#7F93FE",
     "tonalRamp": [
-     "#192334",
-     "#263A59",
-     "#345589",
-     "#3E71C1",
-     "#7294CA",
-     "#A2B7D7",
-     "#CBD6E6",
-     "#EEF1F6"
+     "#0C1540",
+     "#0F1E70",
+     "#0C26B0",
+     "#022AFD",
+     "#4964F3",
+     "#8A9AF0",
+     "#BFC7F3",
+     "#EBEDFA"
     ]
    },
-   "navy-dot": {
+   "indigo-tint": {
     "role": "primary",
-    "displayName": "navy-dot",
-    "canonical": "#3A5378",
+    "displayName": "indigo-tint",
+    "canonical": "#ECEFFF",
     "tonalRamp": [
-     "#1D242F",
-     "#2F3C51",
-     "#41597B",
-     "#5377AC",
-     "#8098BC",
-     "#ABB9CF",
-     "#D0D7E2",
-     "#F0F2F5"
+     "#0C1440",
+     "#0E1E71",
+     "#0B25B2",
+     "#0028FF",
+     "#4863F5",
+     "#8999F1",
+     "#BFC7F3",
+     "#EBEDFA"
     ]
    },
-   "navy-tint": {
+   "indigo-tint-strong": {
     "role": "primary",
-    "displayName": "navy-tint",
-    "canonical": "#EBF0F6",
+    "displayName": "indigo-tint-strong",
+    "canonical": "#D9DFFF",
     "tonalRamp": [
-     "#1C2530",
-     "#2D3E52",
-     "#3F5B7E",
-     "#4F7BB0",
-     "#7D9BBF",
-     "#A9BBD0",
-     "#CFD8E3",
-     "#EFF2F5"
-    ]
-   },
-   "navy-tint-strong": {
-    "role": "primary",
-    "displayName": "navy-tint-strong",
-    "canonical": "#DFE6EF",
-    "tonalRamp": [
-     "#1E252F",
-     "#2F3E50",
-     "#435B7A",
-     "#557AAA",
-     "#819ABB",
-     "#ABBBCE",
-     "#D0D8E1",
-     "#F0F2F5"
+     "#0C1440",
+     "#0E1E71",
+     "#0B25B2",
+     "#0028FF",
+     "#4863F5",
+     "#8999F1",
+     "#BFC7F3",
+     "#EBEDFA"
     ]
    },
    "selection": {
     "role": "neutral",
     "displayName": "selection",
-    "canonical": "#D5E0EE",
+    "canonical": "#D9DFFF",
     "tonalRamp": [
-     "#1B2531",
-     "#2B3D55",
-     "#3B5A82",
-     "#4979B6",
-     "#799AC3",
-     "#A7BAD3",
-     "#CED7E4",
-     "#EFF2F5"
+     "#0C1440",
+     "#0E1E71",
+     "#0B25B2",
+     "#0028FF",
+     "#4863F5",
+     "#8999F1",
+     "#BFC7F3",
+     "#EBEDFA"
     ]
    },
    "ink-slate": {
@@ -723,7 +708,7 @@
    "refersTo": "button-primary",
    "description": "화면당 하나뿐인 다음 행동.",
    "html": "<button class=\"ds-btn\">저장하기</button>",
-   "css": ".ds-btn{font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;display:block;width:280px;border:0;border-radius:16px;background:#1F3554;color:#fff;font-weight:700;font-size:17px;padding:16px;box-shadow:0 8px 18px -10px rgba(15,27,45,.7);cursor:pointer;transition:transform .15s}.ds-btn:active{transform:scale(.98)}.ds-btn:focus-visible{outline:2px solid #1F3554;outline-offset:2px}"
+   "css": ".ds-btn{font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;display:block;width:280px;border:0;border-radius:16px;background:#3D5AFE;color:#fff;font-weight:700;font-size:17px;padding:16px;box-shadow:0 8px 18px -10px rgba(15,27,45,.7);cursor:pointer;transition:transform .15s}.ds-btn:active{transform:scale(.98)}.ds-btn:focus-visible{outline:2px solid #3D5AFE;outline-offset:2px}"
   },
   {
    "name": "Soft Button",
@@ -731,7 +716,7 @@
    "refersTo": "button-soft",
    "description": "두 번째 선택.",
    "html": "<button class=\"ds-btn-soft\">공유자 관리로 가기</button>",
-   "css": ".ds-btn-soft{font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;display:block;width:280px;border:0;border-radius:16px;background:#EBF0F6;color:#1F3554;font-weight:700;font-size:17px;padding:16px;cursor:pointer}.ds-btn-soft:hover{background:#DFE6EF}.ds-btn-soft:focus-visible{outline:2px solid #1F3554;outline-offset:2px}"
+   "css": ".ds-btn-soft{font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;display:block;width:280px;border:0;border-radius:16px;background:#ECEFFF;color:#3D5AFE;font-weight:700;font-size:17px;padding:16px;cursor:pointer}.ds-btn-soft:hover{background:#D9DFFF}.ds-btn-soft:focus-visible{outline:2px solid #3D5AFE;outline-offset:2px}"
   },
   {
    "name": "White Pill Button",
@@ -739,7 +724,7 @@
    "refersTo": "button-white",
    "description": "시작·로그인 화면 전용.",
    "html": "<div class=\"ds-wrap\"><button class=\"ds-btn-wh\">로그인</button></div>",
-   "css": ".ds-wrap{background:linear-gradient(160deg,#F3F5F8,#F3F5F8);padding:20px}.ds-btn-wh{font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;width:260px;height:54px;border-radius:27px;background:#fff;color:#1F3554;font-weight:700;font-size:17px;border:1.5px solid rgba(15,27,45,.32);box-shadow:0 10px 20px -12px rgba(15,27,45,.55);cursor:pointer}.ds-btn-wh:focus-visible{outline:2px solid #1F3554;outline-offset:2px}"
+   "css": ".ds-wrap{background:linear-gradient(160deg,#F3F5F8,#F3F5F8);padding:20px}.ds-btn-wh{font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;width:260px;height:54px;border-radius:27px;background:#fff;color:#3D5AFE;font-weight:700;font-size:17px;border:1.5px solid rgba(15,27,45,.32);box-shadow:0 10px 20px -12px rgba(15,27,45,.55);cursor:pointer}.ds-btn-wh:focus-visible{outline:2px solid #3D5AFE;outline-offset:2px}"
   },
   {
    "name": "Glass Card with Task",
@@ -747,7 +732,7 @@
    "refersTo": "card-glass",
    "description": "기본 카드와 할 일 한 줄.",
    "html": "<div class=\"ds-bg\"><div class=\"ds-card\"><div class=\"ds-h\">지금 챙길 일</div><div class=\"ds-li\"><span class=\"ds-cb\"></span><div><b>이삿짐센터 견적 비교</b><small>11/5 · D-day</small></div><button class=\"ds-bo\">수정</button></div></div></div>",
-   "css": ".ds-bg{background:linear-gradient(160deg,#F3F5F8,#F3F5F8 52%,#F3F5F8);padding:16px;font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;color:#18212F}.ds-card{background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:18px 16px;box-shadow:0 7px 20px rgba(15,27,45,.07)}.ds-h{font-size:19px;font-weight:700;margin-bottom:8px}.ds-li{display:flex;gap:12px;align-items:center;padding:12px 0}.ds-li>div{flex:1}.ds-li b{display:block;font-size:15px}.ds-li small{font-size:12.5px;color:#5F6B7A}.ds-cb{width:20px;height:20px;border-radius:5px;border:2px solid #9AA4B2;background:rgba(255,255,255,.7)}.ds-bo{border:0;border-radius:9px;background:#EBF0F6;color:#3D4859;padding:7px 11px;font-size:13px;font-weight:600}"
+   "css": ".ds-bg{background:linear-gradient(160deg,#F3F5F8,#F3F5F8 52%,#F3F5F8);padding:16px;font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;color:#18212F}.ds-card{background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:18px 16px;box-shadow:0 7px 20px rgba(15,27,45,.07)}.ds-h{font-size:19px;font-weight:700;margin-bottom:8px}.ds-li{display:flex;gap:12px;align-items:center;padding:12px 0}.ds-li>div{flex:1}.ds-li b{display:block;font-size:15px}.ds-li small{font-size:12.5px;color:#5F6B7A}.ds-cb{width:20px;height:20px;border-radius:5px;border:2px solid #9AA4B2;background:rgba(255,255,255,.7)}.ds-bo{border:0;border-radius:9px;background:#ECEFFF;color:#3D4859;padding:7px 11px;font-size:13px;font-weight:600}"
   },
   {
    "name": "Hero D-day Card",
@@ -755,7 +740,7 @@
    "refersTo": "hero-card",
    "description": "D-day, 진행률, 단계 점.",
    "html": "<div class=\"ds-hero\"><small>11/28 잔금일</small><div class=\"ds-big\">D-23<span>일 남음</span></div><div class=\"ds-bar\"><i></i></div></div>",
-   "css": ".ds-hero{font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;width:320px;border-radius:27px;padding:20px;color:#fff;background:linear-gradient(137deg,#1B2E4A,#16263D 54%,#0F1B2D);box-shadow:0 14px 28px rgba(15,27,45,.28)}.ds-hero small{font-size:14px;opacity:.85}.ds-big{font-size:56px;font-weight:800;letter-spacing:-2px;line-height:1.05}.ds-big span{font-size:20px;font-weight:600;letter-spacing:0;margin-left:6px}.ds-bar{height:10px;border-radius:5px;background:rgba(41,18,94,.4);margin-top:16px;overflow:hidden}.ds-bar i{display:block;width:16%;height:100%;background:#34D399;border-radius:5px}"
+   "css": ".ds-hero{font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;width:320px;border-radius:27px;padding:20px;color:#fff;background:linear-gradient(137deg,#5068FE,#2C45D9 54%,#0F1B2D);box-shadow:0 14px 28px rgba(15,27,45,.28)}.ds-hero small{font-size:14px;opacity:.85}.ds-big{font-size:56px;font-weight:800;letter-spacing:-2px;line-height:1.05}.ds-big span{font-size:20px;font-weight:600;letter-spacing:0;margin-left:6px}.ds-bar{height:10px;border-radius:5px;background:rgba(41,18,94,.4);margin-top:16px;overflow:hidden}.ds-bar i{display:block;width:16%;height:100%;background:#34D399;border-radius:5px}"
   },
   {
    "name": "Stage Tags",
@@ -763,7 +748,7 @@
    "refersTo": "stage-tag-current",
    "description": "단계 상태를 글자로 말하는 꼬리표.",
    "html": "<div class=\"ds-row\"><span class=\"ds-stg ds-dn\">1단계: 계약금 완료</span><span class=\"ds-stg ds-cur\">2단계: 중도금 단계 (현재)</span><span class=\"ds-stg ds-fu\">3단계: 잔금 단계 (D-23)</span></div>",
-   "css": ".ds-row{display:flex;flex-direction:column;gap:8px;align-items:flex-start;font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;}.ds-stg{border-radius:8px;padding:4px 9px;font-size:13px;font-weight:700}.ds-dn{background:#E3F5EC;color:#0B8A60}.ds-cur{background:#EBF0F6;color:#1F3554}.ds-fu{background:rgba(15,27,45,.12);color:#3D4859}"
+   "css": ".ds-row{display:flex;flex-direction:column;gap:8px;align-items:flex-start;font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;}.ds-stg{border-radius:8px;padding:4px 9px;font-size:13px;font-weight:700}.ds-dn{background:#E3F5EC;color:#0B8A60}.ds-cur{background:#ECEFFF;color:#3D5AFE}.ds-fu{background:rgba(15,27,45,.12);color:#3D4859}"
   },
   {
    "name": "Input Field",
@@ -771,7 +756,7 @@
    "refersTo": "input-field",
    "description": "기본 입력칸.",
    "html": "<label class=\"ds-lb\">이사 갈 집<input class=\"ds-in\" placeholder=\"예: 성남 분당구 정자동\"></label>",
-   "css": ".ds-lb{display:block;width:300px;font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;font-size:14px;font-weight:600;color:#3D4859}.ds-in{display:block;width:100%;box-sizing:border-box;margin-top:8px;background:#F1F3F6;border:0;border-radius:12px;padding:14px;font-size:16px;color:#18212F}.ds-in:focus-visible{outline:2px solid #1F3554;outline-offset:2px}"
+   "css": ".ds-lb{display:block;width:300px;font-family:Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;font-size:14px;font-weight:600;color:#3D4859}.ds-in{display:block;width:100%;box-sizing:border-box;margin-top:8px;background:#F1F3F6;border:0;border-radius:12px;padding:14px;font-size:16px;color:#18212F}.ds-in:focus-visible{outline:2px solid #3D5AFE;outline-offset:2px}"
   },
   {
    "name": "Bottom Navigation",
@@ -784,12 +769,12 @@
  ],
  "narrative": {
   "northStar": "든든한 이사 동행",
-  "overview": "24dday는 이사를 준비하는 몇 주 동안 옆에서 \"지금 이것만 하면 돼요\"라고 알려주는 차분한 동반자예요. 토스·Linear처럼 회색 바탕 위에 흰 카드를 여유 있게 놓고, 장식 대신 글자 크기·굵기와 숫자로 위계를 만들어요. 화면 맨 위의 진한 네이비 카드 하나(D-day 히어로, 자금 요약)만 무게를 갖고, 나머지는 흰 카드로 조용히 정리해요.\n\n색은 신뢰감 있는 슬레이트 네이비가 뼈대이고, 에메랄드·앰버·코랄 세 가지 작은 색이 상태를 말해요. 보라 그라데이션, 유리 블러, 색깔 빛 번짐은 쓰지 않아요. 모바일 한 손 사용이 기본이고 앱 폭은 최대 430px이에요.",
+  "overview": "24dday는 이사를 준비하는 몇 주 동안 옆에서 \"지금 이것만 하면 돼요\"라고 알려주는 차분한 동반자예요. 토스·Linear처럼 회색 바탕 위에 흰 카드를 여유 있게 놓고, 장식 대신 글자 크기·굵기와 숫자로 위계를 만들어요. 화면 맨 위의 인디고 카드 하나(D-day 히어로, 자금 요약)만 무게를 갖고, 나머지는 흰 카드로 조용히 정리해요.\n\n색은 신뢰감 있는 인디고 블루가 뼈대이고, 에메랄드·앰버·코랄 세 가지 작은 색이 상태를 말해요. 보라 그라데이션, 유리 블러, 색깔 빛 번짐은 쓰지 않아요. 모바일 한 손 사용이 기본이고 앱 폭은 최대 430px이에요.",
   "keyCharacteristics": [
    "회색 바탕(`app-gray`) + 흰 카드, 얇은 선과 아주 옅은 그림자",
-   "진한 네이비 카드는 화면 맨 위 하나만",
+   "인디고 카드는 화면 맨 위 하나만",
    "세 가지 상태 색: 에메랄드(끝냄·보유), 앰버(받을 돈), 코랄(부족·주의)",
-   "진한 네이비 하단 메뉴, 선택한 탭 위로 볼록 솟은 곡선과 흰 동그라미",
+   "진한 네이비 하단 메뉴, 선택한 탭 위로 볼록 솟은 곡선과 인디고 동그라미",
    "금액·날짜는 모두 같은 폭 숫자(tabular-nums)"
   ],
   "rules": [
@@ -804,8 +789,8 @@
     "section": "colors"
    },
    {
-    "name": "The No Purple Rule",
-    "body": "보라 그라데이션과 색깔 빛 번짐은 쓰지 않아요. 흔한 AI 템플릿처럼 보여요.",
+    "name": "The No Glow Rule",
+    "body": "사방으로 번지는 색깔 빛과 유리 블러는 쓰지 않아요. 흔한 AI 템플릿처럼 보여요. 그림자는 중립 검정으로 아래로만 떨어져요.",
     "section": "colors"
    },
    {
@@ -815,7 +800,7 @@
    },
    {
     "name": "The One Heavy Card Rule",
-    "body": "한 화면에서 진한 네이비 카드는 맨 위 하나뿐이에요.",
+    "body": "한 화면에서 인디고 카드는 맨 위 하나뿐이에요.",
     "section": "elevation & depth"
    }
   ],
@@ -826,10 +811,10 @@
    "**Do** 움직임은 `prefers-reduced-motion`에서 멈춰요."
   ],
   "donts": [
-   "**Don't** 보라 그라데이션, 유리 블러, 사방으로 번지는 색깔 빛을 쓰지 마세요.",
+   "**Don't** 유리 블러, 사방으로 번지는 색깔 빛을 쓰지 마세요.",
    "**Don't** 안내 문구에 진한 빨강 굵은 글씨를 쓰지 마세요.",
    "**Don't** 쉬운 설명을 목록에 늘 펼쳐 두지 마세요.",
-   "**Don't** 한 화면에 진한 네이비 카드를 두 개 이상 두지 마세요."
+   "**Don't** 한 화면에 인디고 카드를 두 개 이상 두지 마세요."
   ]
  }
 }

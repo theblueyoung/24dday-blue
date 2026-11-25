@@ -1,17 +1,16 @@
 ---
 name: 24dday
-description: 잔금일 D-day를 기준으로 이사 할 일·돈·서류를 함께 챙기는 앱 (슬레이트 네이비 + 에메랄드)
+description: 잔금일 D-day를 기준으로 이사 할 일·돈·서류를 함께 챙기는 앱 (인디고 블루 + 에메랄드)
 colors:
   navy-night: "#0F1B2D"
-  navy-deep: "#16263D"
-  navy-hero-top: "#1B2E4A"
-  navy-primary: "#1F3554"
-  navy-raised: "#22395A"
-  navy-splash-bottom: "#0B1422"
-  navy-dot: "#3A5378"
-  navy-tint: "#EBF0F6"
-  navy-tint-strong: "#DFE6EF"
-  selection: "#D5E0EE"
+  indigo-deep: "#2C45D9"
+  indigo-hero-top: "#5068FE"
+  indigo-primary: "#3D5AFE"
+  indigo-splash-bottom: "#1F2E9E"
+  indigo-dot: "#7F93FE"
+  indigo-tint: "#ECEFFF"
+  indigo-tint-strong: "#D9DFFF"
+  selection: "#D9DFFF"
   ink-slate: "#18212F"
   ink-slate-soft: "#3D4859"
   slate-gray: "#5F6B7A"
@@ -146,19 +145,19 @@ spacing:
   section: "24px"
 components:
   button-primary:
-    backgroundColor: "{colors.navy-primary}"
+    backgroundColor: "{colors.indigo-primary}"
     textColor: "#FFFFFF"
     rounded: "{rounded.button}"
     padding: "16px"
     typography: "{typography.button}"
   button-soft:
-    backgroundColor: "{colors.navy-tint}"
-    textColor: "{colors.navy-primary}"
+    backgroundColor: "{colors.indigo-tint}"
+    textColor: "{colors.indigo-primary}"
     rounded: "{rounded.button}"
     padding: "16px"
   button-white:
     backgroundColor: "#FFFFFF"
-    textColor: "{colors.navy-primary}"
+    textColor: "{colors.indigo-primary}"
     rounded: "{rounded.auth-pill}"
     height: "54px"
   button-danger:
@@ -167,7 +166,7 @@ components:
     rounded: "{rounded.button}"
     padding: "16px"
   button-small:
-    backgroundColor: "{colors.navy-tint}"
+    backgroundColor: "{colors.indigo-tint}"
     textColor: "{colors.ink-slate-soft}"
     rounded: "{rounded.chip-small}"
     padding: "7px 11px"
@@ -186,8 +185,8 @@ components:
     rounded: "{rounded.field}"
     padding: "14px"
   stage-tag-current:
-    backgroundColor: "{colors.navy-tint}"
-    textColor: "{colors.navy-primary}"
+    backgroundColor: "{colors.indigo-tint}"
+    textColor: "{colors.indigo-primary}"
     rounded: "{rounded.tag}"
     padding: "4px 9px"
   stage-tag-done:
@@ -205,28 +204,29 @@ components:
 
 **Creative North Star: "든든한 이사 동행"**
 
-24dday는 이사를 준비하는 몇 주 동안 옆에서 "지금 이것만 하면 돼요"라고 알려주는 차분한 동반자예요. 토스·Linear처럼 회색 바탕 위에 흰 카드를 여유 있게 놓고, 장식 대신 글자 크기·굵기와 숫자로 위계를 만들어요. 화면 맨 위의 진한 네이비 카드 하나(D-day 히어로, 자금 요약)만 무게를 갖고, 나머지는 흰 카드로 조용히 정리해요.
+24dday는 이사를 준비하는 몇 주 동안 옆에서 "지금 이것만 하면 돼요"라고 알려주는 차분한 동반자예요. 토스·Linear처럼 회색 바탕 위에 흰 카드를 여유 있게 놓고, 장식 대신 글자 크기·굵기와 숫자로 위계를 만들어요. 화면 맨 위의 인디고 카드 하나(D-day 히어로, 자금 요약)만 무게를 갖고, 나머지는 흰 카드로 조용히 정리해요.
 
-색은 신뢰감 있는 슬레이트 네이비가 뼈대이고, 에메랄드·앰버·코랄 세 가지 작은 색이 상태를 말해요. 보라 그라데이션, 유리 블러, 색깔 빛 번짐은 쓰지 않아요. 모바일 한 손 사용이 기본이고 앱 폭은 최대 430px이에요.
+색은 신뢰감 있는 인디고 블루가 뼈대이고, 에메랄드·앰버·코랄 세 가지 작은 색이 상태를 말해요. 보라 그라데이션, 유리 블러, 색깔 빛 번짐은 쓰지 않아요. 모바일 한 손 사용이 기본이고 앱 폭은 최대 430px이에요.
 
 **Key Characteristics:**
 - 회색 바탕(`app-gray`) + 흰 카드, 얇은 선과 아주 옅은 그림자
-- 진한 네이비 카드는 화면 맨 위 하나만
+- 인디고 카드는 화면 맨 위 하나만
 - 세 가지 상태 색: 에메랄드(끝냄·보유), 앰버(받을 돈), 코랄(부족·주의)
-- 진한 네이비 하단 메뉴, 선택한 탭 위로 볼록 솟은 곡선과 흰 동그라미
+- 진한 네이비 하단 메뉴, 선택한 탭 위로 볼록 솟은 곡선과 인디고 동그라미
 - 금액·날짜는 모두 같은 폭 숫자(tabular-nums)
 
 ## Colors
 
-슬레이트 네이비 한 가족 + 상태를 말하는 세 가지 작은 색.
+인디고 블루 한 가족 + 상태를 말하는 세 가지 작은 색. 하단 메뉴만 진한 남색(`navy-night`)이에요.
 
 ### Primary
-- **네이비 프라이머리** (`navy-primary`): 주 버튼, 지금 단계 카드, 링크, 선택된 세그먼트, 자금 요약의 "낸 돈".
-- **네이비 나이트** (`navy-night`): 하단 메뉴, 히어로 그라데이션 아래쪽(`navy-hero-top` → `navy-night`, 165°).
-- **네이비 틴트** (`navy-tint`): 보조 버튼, 지금 단계 꼬리표 바탕.
+- **인디고 프라이머리** (`indigo-primary`): 주 버튼, 지금 단계 카드, 링크, 선택된 세그먼트, 자금 요약의 "낸 돈".
+- **인디고 그라데이션** (`indigo-hero-top` → `indigo-deep`, 160°): D-day 히어로, 자금 탭 요약, 서비스 견적 카드. 이 위의 진행률·끝난 단계는 흰색이에요.
+- **네이비 나이트** (`navy-night`): 하단 메뉴 띠.
+- **인디고 틴트** (`indigo-tint`): 보조 버튼, 지금 단계 꼬리표 바탕.
 
 ### Secondary
-- **에메랄드** (`emerald` 밝은 바탕 / `emerald-bright` 진한 바탕 / `emerald-ink` 글씨): 끝냄·보유. 체크된 칸, 진행률, 끝난 단계 점, 보유 금액.
+- **에메랄드** (`emerald` 밝은 바탕 / `emerald-bright` 진한 바탕 / `emerald-ink` 글씨): 끝냄·보유. 체크된 칸, 보유 금액, 완료 꼬리표.
 
 ### Tertiary
 - **앰버** (`amber`): 앞으로 들어올 돈(받을 돈).
@@ -243,7 +243,7 @@ components:
 
 **The Quiet Alarm Rule.** 진한 빨강은 되돌릴 수 없는 행동과 실제 오류에만 써요. 지난 일, 부족한 돈 같은 안내는 회색 글씨나 연한 코랄 칩으로 조용히 알려요.
 
-**The No Purple Rule.** 보라 그라데이션과 색깔 빛 번짐은 쓰지 않아요. 흔한 AI 템플릿처럼 보여요.
+**The No Glow Rule.** 사방으로 번지는 색깔 빛과 유리 블러는 쓰지 않아요. 흔한 AI 템플릿처럼 보여요. 그림자는 중립 검정으로 아래로만 떨어져요.
 
 ## Typography
 
@@ -271,7 +271,7 @@ components:
 평평한 바탕 + 아주 옅은 그림자. 흰 카드는 `0 1px 2px rgba(15,27,45,.04)`와 6% 선으로만 떠 있어요. 지금 단계 카드와 히어로만 아래로 떨어지는 부드러운 그림자를 가져요. 사방으로 번지는 빛(0 offset glow)은 쓰지 않아요.
 
 ### Named Rules
-**The One Heavy Card Rule.** 한 화면에서 진한 네이비 카드는 맨 위 하나뿐이에요.
+**The One Heavy Card Rule.** 한 화면에서 인디고 카드는 맨 위 하나뿐이에요.
 
 ## Shapes
 
@@ -280,24 +280,24 @@ components:
 ## Components
 
 ### Buttons
-- **Primary:** 네이비 프라이머리 단색, 흰 글씨 17px 700, 16px 모서리. 누르면 0.97로 살짝 줄어요(160ms, ease-out).
-- **Soft:** 네이비 틴트 바탕 + 네이비 글씨. **White:** 시작 화면 전용 흰 알약. **Danger:** 위험 색, 확인 창에서만.
-- **Focus:** 2px 네이비 윤곽선, 2px 띄움.
+- **Primary:** 인디고 프라이머리 단색, 흰 글씨 17px 700, 16px 모서리. 누르면 0.97로 살짝 줄어요(160ms, ease-out).
+- **Soft:** 인디고 틴트 바탕 + 인디고 글씨. **White:** 시작 화면 전용 흰 알약. **Danger:** 위험 색, 확인 창에서만.
+- **Focus:** 2px 인디고 윤곽선, 2px 띄움.
 
 ### Cards / Containers
 흰 바탕, 6% 선, 20px 모서리, 20px 18px 여백, 아주 옅은 그림자. 카드 안에 카드를 겹치지 않아요(단계 목록의 작은 카드는 예외로 얇은 선만).
 
 ### Inputs / Fields
-입력칸 회색 바탕, 테두리 없음, 12px 모서리, 16px 글씨. 포커스는 네이비 윤곽선.
+입력칸 회색 바탕, 테두리 없음, 12px 모서리, 16px 글씨. 포커스는 인디고 윤곽선.
 
 ### Navigation
-네이비 나이트 띠, 5개 탭. 선택한 탭 위로 띠가 볼록 솟고 흰 동그라미가 네이비 아이콘을 받쳐요. 0.35초 동안 미끄러지듯 이동, 움직임 줄이기 설정에서는 바로 바뀌어요.
+네이비 나이트 띠, 5개 탭. 선택한 탭 위로 띠가 볼록 솟고 인디고 동그라미가 흰 아이콘을 받쳐요. 0.35초 동안 미끄러지듯 이동, 움직임 줄이기 설정에서는 바로 바뀌어요.
 
 ### Move Fund Summary (signature)
-홈의 "이사 자금" 카드. 총 필요 금액(30px), 오른쪽에 부족 칩(코랄) 또는 충분 칩(에메랄드), 네 칸 막대(낸 돈 네이비 · 보유 에메랄드 · 받을 돈 앰버 · 모자람 코랄)와 범례, 아래에 보낼 돈 상위 3개 항목의 비중 막대. 막대는 처음 그려질 때 0.7초 동안 왼쪽에서 채워져요.
+홈의 "이사 자금" 카드. 총 필요 금액(30px), 오른쪽에 부족 칩(코랄) 또는 충분 칩(에메랄드), 네 칸 막대(낸 돈 인디고 · 보유 에메랄드 · 받을 돈 앰버 · 모자람 코랄)와 범례, 아래에 보낼 돈 상위 3개 항목의 비중 막대. 막대는 처음 그려질 때 0.7초 동안 왼쪽에서 채워져요.
 
 ### Stage Tag
-"N단계: 이름 (상태)" 글자로 상태를 말해요. 지금 단계는 네이비 틴트 + 네이비, 완료는 에메랄드 워시 + 에메랄드 잉크 + 체크, 앞으로 올 단계는 옅은 회색 + 소프트 잉크.
+"N단계: 이름 (상태)" 글자로 상태를 말해요. 지금 단계는 인디고 틴트 + 인디고, 완료는 에메랄드 워시 + 에메랄드 잉크 + 체크, 앞으로 올 단계는 옅은 회색 + 소프트 잉크.
 
 ## Do's and Don'ts
 
@@ -308,7 +308,7 @@ components:
 - **Do** 움직임은 `prefers-reduced-motion`에서 멈춰요.
 
 ### Don't:
-- **Don't** 보라 그라데이션, 유리 블러, 사방으로 번지는 색깔 빛을 쓰지 마세요.
+- **Don't** 유리 블러, 사방으로 번지는 색깔 빛을 쓰지 마세요.
 - **Don't** 안내 문구에 진한 빨강 굵은 글씨를 쓰지 마세요.
 - **Don't** 쉬운 설명을 목록에 늘 펼쳐 두지 마세요.
-- **Don't** 한 화면에 진한 네이비 카드를 두 개 이상 두지 마세요.
+- **Don't** 한 화면에 인디고 카드를 두 개 이상 두지 마세요.
