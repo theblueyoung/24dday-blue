@@ -378,53 +378,53 @@ leave:{t:'',d:0,get:0,loan:0},
 money:[{id:'c1',ev:'c1',io:'out',n:'계약금',amt:5000,bank:'국민은행'},{id:'c2',ev:'c2',io:'out',n:'중도금',amt:15000,bank:'국민은행'},{id:'loan',ev:'bal',io:'in',n:'새 대출 받기',amt:40000,bank:'신한은행'},{id:'bal',ev:'bal',io:'out',n:'잔금',amt:44000,bank:'신한은행 · 카카오뱅크'}],
 pp:[{id:'me',n:'유영',rel:'나',c:0},{id:'p2',n:'민희',rel:'배우자',c:1}],
 ev:[
-{id:'reg',n:'등기부등본·건축물대장 확인',o:-80,w:'me',st:1,i:'doc',r:'소유자, 근저당·압류가 있는지 봐요'},
+{id:'reg',n:'집주인·빚 기록 확인 (등기부)',o:-80,w:'me',st:1,i:'doc',r:'소유자, 근저당·압류가 있는지 봐요'},
 {id:'prc',n:'시세 대비 보증금 확인',o:-80,w:'p2',st:1,i:'coin',t:'jeon',r:'보증금이 매매 시세에 너무 가까우면 위험해요'},
 {id:'wpr',n:'주변 월세 시세 비교',o:-80,w:'p2',st:1,i:'coin',t:'wol'},
-{id:'ttx',n:'집주인 세금 체납 확인',o:-79,w:'me',st:1,i:'doc',t:'rent',r:'집주인 동의를 받아 국세·지방세 납부 내역을 봐요'},
-{id:'hq',n:'전세보증보험 가입 가능 조회',o:-79,w:'me',st:1,i:'scale',t:'jeon',r:'위반건축물 등은 가입이 거절될 수 있어요'},
-{id:'ct',n:'계약서 작성 (특약 넣기)',o:-77,w:'all',st:1,i:'doc',r:'잔금 전 추가 대출 금지, 보증보험 거절 시 계약 무효 같은 특약을 넣어요'},
-{id:'c1',n:'계약금 송금',nr:'계약금 송금 (집주인 명의 계좌)',mn:'계약금',o:-77,w:'all',st:1,i:'coin',big:1,main:1},
+{id:'ttx',n:'집주인이 밀린 세금 확인',o:-79,w:'me',st:1,i:'doc',t:'rent',r:'집주인 동의를 받아 국세·지방세 납부 내역을 봐요'},
+{id:'hq',n:'보증금 지키는 보험, 가입 되는지 확인',o:-79,w:'me',st:1,i:'scale',t:'jeon',r:'위반건축물 등은 가입이 거절될 수 있어요'},
+{id:'ct',n:'계약서 쓰기 (따로 할 약속 넣기)',o:-77,w:'all',st:1,i:'doc',r:'잔금 전 추가 대출 금지, 보증보험 거절 시 계약 무효 같은 특약을 넣어요'},
+{id:'c1',n:'계약금 보내기',nr:'계약금 보내기 (집주인 이름 통장으로)',mn:'계약금',o:-77,w:'all',st:1,i:'coin',big:1,main:1},
 {id:'lq',n:'대출 한도 알아보기',o:-70,w:'p2',st:1,i:'bank',t:'buy'},
 {id:'jl',n:'전세자금대출 알아보기',o:-70,w:'p2',st:1,i:'bank',t:'jeon'},
-{id:'rpt',n:'주택 임대차 신고 (계약 후 30일 안)',o:-76,w:'me',st:1,i:'doc',t:'rent',r:'신고하면 확정일자가 같이 부여돼요'},
+{id:'rpt',n:'전월세 계약 신고 (계약 후 30일 안)',o:-76,w:'me',st:1,i:'doc',t:'rent',r:'신고하면 확정일자가 같이 부여돼요'},
 {id:'mq',n:'이삿짐센터 견적 비교',o:-23,w:'me',st:2,i:'truck',s:'mv',r:'2~3곳을 비교하면 가격 차이가 꽤 나요'},
 {id:'in',n:'인테리어 견적 받기',o:-21,w:'all',st:2,i:'brush',t:'int',s:'in',main:1,r:'중도금 시점에 견적을 받아두면 공사 일정이 여유로워요'},
-{id:'ln',n:'주택담보대출 상담',o:-21,w:'p2',st:2,i:'bank',t:'buy',r:'은행은 잔금 한 달 전부터 상담해주는 곳이 많아요'},
-{id:'rg1',n:'중도금 전 등기부 다시 확인',o:-20,w:'me',st:2,i:'doc',t:'buy'},
-{id:'c2',n:'중도금 송금',mn:'중도금',o:-20,w:'p2',st:2,i:'coin',big:1,t:'buy'},
-{id:'lw',n:'법무사 견적 비교',o:-14,w:'me',st:3,i:'scale',t:'buy',s:'lw',main:1,r:'잔금 4주 전부터 2~3곳을 비교해요'},
+{id:'ln',n:'집 담보 대출 상담',o:-21,w:'p2',st:2,i:'bank',t:'buy',r:'은행은 잔금 한 달 전부터 상담해주는 곳이 많아요'},
+{id:'rg1',n:'중도금 전 집주인·빚 다시 확인',o:-20,w:'me',st:2,i:'doc',t:'buy'},
+{id:'c2',n:'중도금 보내기',mn:'중도금',o:-20,w:'p2',st:2,i:'coin',big:1,t:'buy'},
+{id:'lw',n:'법무사(등기 대행) 비교',o:-14,w:'me',st:3,i:'scale',t:'buy',s:'lw',main:1,r:'잔금 4주 전부터 2~3곳을 비교해요'},
 {id:'mr',n:'이삿짐 예약',o:-11,w:'all',st:3,i:'truck',s:'mv',main:1,r:'이사 25일 전쯤 업체를 확정해요'},
 {id:'doc',n:'서류·자금 준비',o:-7,w:'me',st:3,i:'doc',main:1},
 {id:'ib',n:'인테리어 시공',o:-5,w:'me',st:3,i:'brush',t:'int',main:1},
 {id:'mgr',n:'관리비 포함 항목 확인',o:-3,w:'p2',st:3,i:'doc',t:'wol',r:'수도·인터넷·주차가 포함인지 계약서에 적어 둬요'},
-{id:'lx',n:'대출 실행 확인',nr:'전세자금대출 실행 확인',o:-1,w:'p2',st:3,i:'bank',t:'nowol'},
-{id:'rgb',n:'잔금 전날 등기부 확인',o:-1,w:'me',st:3,i:'doc',t:'rent',r:'계약 뒤에 새 빚이 생기지 않았는지 봐요'},
-{id:'rg0',n:'잔금 당일 등기부 다시 확인',o:0,w:'me',st:3,i:'doc',r:'잔금 보내기 직전에 새 권리가 생겼는지 봐요'},
-{id:'bal',n:'잔금 송금',nr:'잔금(보증금) 송금',mn:'잔금',o:0,w:'all',st:3,i:'key',big:1,main:1},
-{id:'rg2',n:'소유권 이전 등기',o:0,w:'me',st:3,i:'scale',t:'buy',r:'잔금 당일 법무사가 신청하는 경우가 많아요'},
-{id:'acq',n:'취득세 신고·납부',o:0,w:'me',st:3,i:'coin',t:'buy',r:'잔금일부터 60일 안에 내야 해요'},
-{id:'fee',n:'관리비·공과금 정산',o:0,w:'p2',st:3,i:'coin'},
+{id:'lx',n:'대출금 들어오는 날 확인',nr:'전세대출금 들어오는 날 확인',o:-1,w:'p2',st:3,i:'bank',t:'nowol'},
+{id:'rgb',n:'잔금 전날 집주인·빚 확인',o:-1,w:'me',st:3,i:'doc',t:'rent',r:'계약 뒤에 새 빚이 생기지 않았는지 봐요'},
+{id:'rg0',n:'잔금 보내기 직전 집주인·빚 확인',o:0,w:'me',st:3,i:'doc',r:'잔금 보내기 직전에 새 권리가 생겼는지 봐요'},
+{id:'bal',n:'잔금 보내기',nr:'잔금(보증금) 보내기',mn:'잔금',o:0,w:'all',st:3,i:'key',big:1,main:1},
+{id:'rg2',n:'집을 내 이름으로 바꾸기 (등기)',o:0,w:'me',st:3,i:'scale',t:'buy',r:'잔금 당일 법무사가 신청하는 경우가 많아요'},
+{id:'acq',n:'집 산 세금 내기 (취득세)',o:0,w:'me',st:3,i:'coin',t:'buy',r:'잔금일부터 60일 안에 내야 해요'},
+{id:'fee',n:'관리비·전기·가스 요금 정리',o:0,w:'p2',st:3,i:'coin'},
 {id:'dis',n:'폐가전 정리',o:3,w:'p2',st:4,i:'trash',s:'ds',main:1,r:'큰 가전과 가구는 수거 예약이 필요해요'},
 {id:'cl',n:'입주청소',o:12,w:'me',st:4,i:'spark',s:'cl',main:1,r:'공사가 끝난 뒤, 이사 하루나 이틀 전에 해요'},
 {id:'mv',n:'이사일',mn:'이사',o:14,w:'all',st:4,i:'truck',big:1,main:1},
 {id:'pho',n:'집 상태 사진 남기기',o:14,w:'me',st:4,i:'spark',t:'rent',r:'나갈 때 원상복구 다툼을 줄여줘요'},
-{id:'mi',n:'전입신고',nr:'전입신고 (잔금·입주 당일)',o:14,w:'all',st:4,i:'pin',big:1,main:1},
-{id:'fx',n:'확정일자 확인',o:0,w:'me',st:4,i:'doc',t:'rent',r:'임대차 신고를 했다면 이미 받았는지 확인만 해요'},
-{id:'rg3',n:'전입 다음 날 등기부 재확인',o:1,w:'me',st:4,i:'doc',t:'rent',r:'입주한 날 몰래 생긴 빚이 없는지 봐요'},
-{id:'hug',n:'전세보증보험 가입',o:1,w:'me',st:4,i:'scale',t:'jeon'},
+{id:'mi',n:'새 주소 신고 (전입신고)',nr:'새 주소 신고 (잔금·입주 당일)',o:14,w:'all',st:4,i:'pin',big:1,main:1},
+{id:'fx',n:'계약서 날짜 도장 확인 (확정일자)',o:0,w:'me',st:4,i:'doc',t:'rent',r:'임대차 신고를 했다면 이미 받았는지 확인만 해요'},
+{id:'rg3',n:'이사 다음 날 집주인·빚 다시 확인',o:1,w:'me',st:4,i:'doc',t:'rent',r:'입주한 날 몰래 생긴 빚이 없는지 봐요'},
+{id:'hug',n:'보증금 지키는 보험 가입',o:1,w:'me',st:4,i:'scale',t:'jeon'},
 {id:'pay',n:'월세 자동이체 설정',o:16,w:'p2',st:4,i:'bank',t:'wol'},
-{id:'gm',n:'관리사무소 신고·공과금 명의 변경',o:16,w:'p2',st:4,i:'home',t:'buy'},
+{id:'gm',n:'관리사무소에 알리고 요금 이름 바꾸기',o:16,w:'p2',st:4,i:'home',t:'buy'},
 {id:'ad',n:'주소 변경 (은행·카드)',o:20,w:'p2',st:4,i:'pin'},
 ...[['ls_ct','lsale','계약하고 계약금 받기',-60,1,'coin','산 사람과 계약서를 쓰고 첫 돈을 받아요'],
 ['ls_mid','lsale','중도금 받기',-30,2,'coin','계약금과 잔금 사이에 받는 돈이에요'],
 ['ls_loan','lsale','기존 대출 갚을 금액 확인',-14,3,'bank','은행에 갚는 날의 정확한 금액과 수수료를 물어봐요'],
-['ls_doc','lsale','매도 서류 준비',-3,3,'doc','인감증명서, 등기권리증 등을 챙겨요'],
+['ls_doc','lsale','집 팔 때 필요한 서류 준비',-3,3,'doc','인감증명서, 등기권리증 등을 챙겨요'],
 ['ls_bal','lsale','잔금 받고 대출 갚기·열쇠 넘기기',0,3,'key','돈이 들어온 걸 확인하고, 대출을 갚고, 빚 기록이 지워지는지(말소) 확인해요'],
-['ls_tax','lsale','양도소득세 확인',7,4,'coin','집을 팔아 남긴 돈에 내는 세금. 기한은 세무 전문가에게 확인해요'],
+['ls_tax','lsale','집 판 세금 확인 (양도소득세)',7,4,'coin','집을 팔아 남긴 돈에 내는 세금. 기한은 세무 전문가에게 확인해요'],
 ['lr_note','lrent','집주인에게 이사 알리기',-75,1,'doc','계약이 끝나기 6~2개월 전에 알려야 자동 연장을 막아요'],
-['lr_fix','lrent','원상복구 범위 확인',-14,3,'spark','어디까지 고쳐 놓고 나갈지 집주인과 정해요'],
-['lr_bal','lrent','보증금 전액 입금 확인',0,3,'key','다 받기 전에는 짐을 다 빼거나 주소를 옮기지 마세요. 못 받으면 임차권등기명령을 알아보세요'],
+['lr_fix','lrent','어디까지 고쳐 놓고 나갈지 정하기',-14,3,'spark','어디까지 고쳐 놓고 나갈지 집주인과 정해요'],
+['lr_bal','lrent','보증금 전액 입금 확인',0,3,'key','다 받기 전에는 짐을 다 빼거나 주소를 옮기지 마세요. 못 받으면 법원에 내 권리를 남기는 절차(임차권등기명령)를 알아보세요'],
 ['lr_fee','lrent','나가는 집 공과금 정산',0,3,'coin','전기·가스·수도·관리비를 나가는 날까지 계산해요']].map(x=>({id:x[0],t:x[1],n:'나가는 집: '+x[2],o:x[3],st:x[4],i:x[5],r:x[6],w:'me',lv:1}))]};
 const CL=o=>JSON.parse(JSON.stringify(o)),DEMO=CL(S);
 function resetTo(fresh,name){const k=CL(DEMO);for(const x in S)delete S[x];Object.assign(S,k);S.fresh=fresh?1:0;setToday();
@@ -486,8 +486,12 @@ const num=v=>Math.max(0,Math.round(+v||0));
 function rows(){const L=S.leave,lb=L.t&&E(L.t==='sale'?'ls_bal':'lr_bal'),lv=lb?[{id:'lin',io:'in',n:'나가는 집에서 받을 돈',amt:L.get,d:dt(lb),seq:0,dn:done(lb),lv:1},{id:'lloan',io:'out',n:'기존 대출 갚기',amt:L.loan,d:dt(lb),seq:1,dn:done(lb),lv:1}]:[];
 return[...lv,...S.money.filter(m=>!m.ev||ok(E(m.ev))).map(m=>{const e=m.ev&&E(m.ev);return{...m,d:e?dt(e):m.d,w:e?e.w:m.w,dn:e?done(e):m.dn,seq:m.io==='in'?2:3}})].sort((a,b)=>a.d-b.d||a.seq-b.seq)}
 /* 날짜·순서대로 계산해서 가장 모자란 순간이 부족 금액 */
+/* 집 값을 계약금 10% · (매매만) 중도금 20% · 잔금 나머지로. 0이면 그대로 둠 */
+const parts=(p,rt)=>{const c=Math.round(p*.1),m=rt?0:Math.round(p*.2);return[c,m,p-c-m]};
+function splitPrice(p){if(!p)return;const v=parts(p,RT());['c1','c2','bal'].forEach((id,i)=>S.money.find(x=>x.id===id).amt=v[i])}
+const housePrice=R=>R.filter(r=>['c1','c2','bal'].includes(r.id)).reduce((a,r)=>a+r.amt,0);
 function lack(have,list){let bal=have,low=0,at=null,need=0,inc=0;for(const r of list){if(r.dn)continue;r.io==='in'?(inc+=r.amt,bal+=r.amt):(need+=r.amt,bal-=r.amt);if(bal<low){low=bal;at=r}}return{need,inc,gap:-low,at}}
-console.assert(lack(10,[{io:'out',amt:30},{io:'in',amt:100}]).gap===20&&lack(10,[{io:'in',amt:100},{io:'out',amt:30}]).gap===0&&lack(0,[{io:'out',amt:5,dn:1}]).need===0&&won(15500)==='1억 5,500만원','자금 계산 확인 실패');
+console.assert(lack(10,[{io:'out',amt:30},{io:'in',amt:100}]).gap===20&&lack(10,[{io:'in',amt:100},{io:'out',amt:30}]).gap===0&&lack(0,[{io:'out',amt:5,dn:1}]).need===0&&won(15500)==='1억 5,500만원'&&parts(50000,0).join()==='5000,10000,35000'&&parts(30001,1).join()==='3000,0,27001','자금 계산 확인 실패');
 
 const IC={mail:'<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/>',lock:'<rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V8a4 4 0 0 1 8 0v2"/>',eye:'<path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',re:'<path d="M20 12a8 8 0 1 1-2.34-5.66L20 8.5"/><path d="M20 3.5v5h-5"/>',home:'<path d="M4 11l8-7 8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"/>',tl:'<rect x="4" y="5" width="16" height="15" rx="3"/><path d="M8 3v4M16 3v4M4 10h16"/>',fund:'<path d="M4 8a3 3 0 0 1 3-3h11v4"/><rect x="4" y="8" width="16" height="12" rx="3"/><circle cx="16" cy="14" r="1.2"/>',svc:'<path d="M4 9.5V20h16V9.5"/><path d="M3 9.5L5 4h14l2 5.5a2.5 2.5 0 0 1-4.5 1.3 2.5 2.5 0 0 1-4.5 0 2.5 2.5 0 0 1-4.5 0A2.5 2.5 0 0 1 3 9.5z"/><path d="M10 20v-5h4v5"/>',plus:'<path d="M12 5v14M5 12h14"/>',my:'<circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c.8-3.8 3.8-5.8 7.5-5.8s6.7 2 7.5 5.8"/>',
 uplus:'<circle cx="9" cy="8" r="3.4"/><path d="M3 19.5c.6-3.3 3-5 6-5s5.4 1.7 6 5"/><path d="M18.5 7.5v6M15.5 10.5h6"/>',bell:'<path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.6 1.8H4.4z"/><path d="M10 21a2.2 2.2 0 0 0 4 0"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>',check:'<path d="M5 12.5l4.5 4.5L19 7.5"/>',
@@ -551,8 +555,9 @@ ${lg?'<div class="afg">비밀번호를 잊으셨나요?</div>':''}
 <p class="aubot">${lg?'계정이 없으신가요?':'이미 계정이 있으신가요?'} <button class="alk" data-a="am" data-v="${lg?'join':'login'}">${lg?'회원가입':'로그인'}</button></p></div>`};
 
 P.onb=()=>`<div class="au onbd"><button class="aulogo sm" data-a="go" data-p="auth" aria-label="앞 화면으로">${LOGO}</button><h1 class="aut" style="margin-top:16px">어떤 이사를<br>준비하세요?</h1><p class="aus">몇 가지만 알려주시면 할 일 순서를 짜 드려요.<br>나중에 마이페이지에서 바꿀 수 있어요.</p><div class="aucard"><label style="margin:0">거래 유형</label><div class="seg2" style="margin:10px 0 0">${['매매','전세','월세'].map(t=>`<button class="${S.type===t?'sel':''}" data-a="type" data-v="${t}">${t}</button>`).join('')}</div>
+<label for="opr">${{매매:'집 값',전세:'전세 보증금',월세:'보증금'}[S.type]} <span style="font-weight:500">(만원)</span></label><input type="number" id="opr" min="0" inputmode="numeric" placeholder="예: 5억이면 50000" value="${S.price||''}"><small style="display:block;margin-top:6px"><b id="oprw">${S.price?'= '+won(S.price):''}</b> 계약금 10%${RT()?'':'·중도금 20%'}·잔금으로 나눠 드려요. 자금 탭에서 고칠 수 있어요.</small>
 <label>잔금일</label><input type="date" id="ob" value="${iso(S.base)}"><small style="display:block;margin-top:6px">이사 들어가는 날이 아니라, 돈을 다 치르는 날이에요.</small>
-<label>계약금은 이미 냈나요?</label><div class="seg2" style="margin:10px 0 0">${[[0,'아직이요'],[1,'냈어요']].map(x=>`<button class="${(S.paid||0)===x[0]?'sel':''}" data-a="paid" data-v="${x[0]}">${x[1]}</button>`).join('')}</div><small style="display:block;margin-top:6px">냈다면 계약서 작성과 계약금 송금을 완료로 표시해 드려요.</small>
+<label>계약금은 이미 냈나요?</label><div class="seg2" style="margin:10px 0 0">${[[0,'아직이요'],[1,'냈어요']].map(x=>`<button class="${(S.paid||0)===x[0]?'sel':''}" data-a="paid" data-v="${x[0]}">${x[1]}</button>`).join('')}</div><small style="display:block;margin-top:6px">냈다면 계약서 쓰기와 계약금 보내기를 완료로 표시해 드려요.</small>
 <label>인테리어 공사를 하나요?</label><div class="seg2" style="margin:10px 0 0">${[[0,'안 해요'],[1,'해요']].map(x=>`<button class="${(S.int?1:0)===x[0]?'sel':''}" aria-pressed="${(S.int?1:0)===x[0]}" data-a="int" data-v="${x[0]}">${x[1]}</button>`).join('')}</div><small style="display:block;margin-top:6px">안 하면 이사일이 잔금일과 같아요.</small>
 <label>지금 사는 집은? (선택)</label><div class="seg2" style="margin:10px 0 0">${[['','해당 없음'],['sale','팔아요'],['rent','전·월세']].map(x=>`<button class="${S.leave.t===x[0]?'sel':''}" aria-pressed="${S.leave.t===x[0]}" data-a="lt" data-v="${x[0]}">${x[1]}</button>`).join('')}</div>${S.leave.t?`<label>지금 집에서 돈 받는 날</label><input type="date" id="old" value="${iso(ld())}">`:''}
 <button class="btn wh" style="margin-top:28px" data-a="start">시작하기</button></div></div>`;
@@ -580,7 +585,7 @@ ${T.map(e=>`<div class="li">${cb(e)}<div><div class="nm ${done(e)?'dnx':''}">${e
 ${fsum()}<div class="c"><div class="shd" style="margin-bottom:14px"><div class="sh2"><span class="hic">${ic('tl',2)}</span>단계별 주요일정</div><a data-a="go" data-p="tl">자세히 보기 ›</a></div>
 <div class="stl">${SG().map(g=>{const G=L.filter(e=>sof(e)===g.k),st=stS(g),pay=rows().filter(r=>r.ev===g.m&&r.io==='out').reduce((a,r)=>a+r.amt,0),K=G.filter(e=>!e.big),nm=g.n.replace(' 단계','');
 return`<button class="sc ${st}" data-a="go" data-p="tl"><div class="row sp">${stTag(g,st)}<span class="sa">${pay?won(pay):''}</span></div>
-<b>${esc(K.slice(0,3).map(e=>e.n.replace(/ (송금|받기|비교|확인|알아보기)$/,'')).join(' · '))}${K.length>3?` 외 ${K.length-3}개`:''}</b><small>${md(dt(G[0]))} ~ ${md(dt(G[G.length-1]))} · 할 일 ${G.filter(done).length}/${G.length}</small></button>`}).join('')}</div></div>`};
+<b>${esc(K.slice(0,3).map(e=>e.n.replace(/ (송금|보내기|받기|비교|확인|알아보기)$/,'')).join(' · '))}${K.length>3?` 외 ${K.length-3}개`:''}</b><small>${md(dt(G[0]))} ~ ${md(dt(G[G.length-1]))} · 할 일 ${G.filter(done).length}/${G.length}</small></button>`}).join('')}</div></div>`};
 
 const docs=()=>S.docs.map((d,i)=>({d,i})).filter(x=>ok({t:x.d[4]}));
 P.tl=()=>{const L=vis(),dc=S.sub==='docs',D=docs();
@@ -596,7 +601,7 @@ ${T.map(e=>`<div class="li">${cb(e)}<div><div class="nm ${done(e)?'dnx':''}">${e
 
 P.fund=()=>{const R=rows(),tot=S.banks.reduce((a,b)=>a+b.amt,0),k=lack(tot,R),L=S.leave,gapD=L.t?Math.round((ld()-S.base)/DAY):0,
 nl=R.filter(r=>!r.dn&&r.io==='in'&&!r.lv).reduce((a,r)=>a+r.amt,0);
-return`<div class="hd"><div><h2>자금</h2><p class="sb" style="margin:6px 0 0">보낼 돈과 받을 돈을 날짜 순서로 계산해요</p></div></div><div style="padding:14px 16px 0"><div class="dk"><small>앞으로 보낼 돈 (필요 금액)</small><div style="font-size:30px;font-weight:800">${won(k.need)}</div>
+return`<div class="hd"><div><h2>자금</h2><p class="sb" style="margin:6px 0 0">보낼 돈과 받을 돈을 날짜 순서로 계산해요</p></div></div><div style="padding:14px 16px 0"><div class="dk">${housePrice(R)?`<small style="display:block;margin-bottom:10px">${RT()?'보증금':'집 값'} <b>${won(housePrice(R))}</b> · 계약금${RT()?'':'·중도금'}·잔금을 더한 금액</small>`:''}<small>앞으로 보낼 돈 (필요 금액)</small><div style="font-size:30px;font-weight:800">${won(k.need)}</div>
 <div class="bar" style="margin:14px 0 8px;height:10px;background:rgba(255,255,255,.18)"><i style="width:${k.need?Math.min(tot/k.need*100,100):0}%;background:var(--ok)"></i><i style="width:${k.need?Math.min(k.inc/k.need*100,100):0}%;background:var(--gold)"></i></div>
 <div class="row sp"><small class="lg2"><i style="background:var(--ok)"></i>보유 ${won(tot)}</small><small class="lg2"><i style="background:var(--gold)"></i>받을 돈 ${won(k.inc)}</small></div>
 <span class="lack ${k.gap?'':'ok'}">${k.gap?`${won(k.gap)} 부족 <em>${md(k.at.d)} ${esc(k.at.n)}</em>`:k.need?'충분해요':'입출금 금액을 입력해 주세요'}</span></div></div>
@@ -686,7 +691,7 @@ else if(a==='logout'){S.out=1;S.sh=null;S.pg='land';S.am='login'}
 else if(a==='wdx'){wipe();resetTo(1);S.pg='land';S.am='login';setTimeout(()=>toast('탈퇴했어요. 그동안 이용해 주셔서 고마워요'),50)}
 else if(a==='type')S.type=d.v;
 else if(a==='int')S.int=+d.v;
-else if(a==='start'){applyType();S.base=Date.parse($('#ob').value)||S.base;if(S.fresh){S.ready=1;S.ev.forEach(e=>{delete e.f;delete e.auto;if(S.paid&&(e.id==='ct'||e.id==='c1')){e.dn=true;return}if(dt(e)<TODAY){e.f=TODAY;e.auto=1}})}S.pg='home';setTimeout(()=>LOCK?toast('이전 기록을 읽지 못해 저장하지 않고 있어요. 마이에서 초기화해 주세요'):banner(notes().find(n=>!S.rd[n.k])),700)}
+else if(a==='start'){applyType();S.base=Date.parse($('#ob').value)||S.base;if(S.fresh){S.ready=1;splitPrice(S.price);S.ev.forEach(e=>{delete e.f;delete e.auto;if(S.paid&&(e.id==='ct'||e.id==='c1')){e.dn=true;return}if(dt(e)<TODAY){e.f=TODAY;e.auto=1}})}S.pg='home';setTimeout(()=>LOCK?toast('이전 기록을 읽지 못해 저장하지 않고 있어요. 마이에서 초기화해 주세요'):banner(notes().find(n=>!S.rd[n.k])),700)}
 else if(a==='lt')S.leave.t=d.v;
 else if(a==='lve')S.sh={t:'lv'};
 else if(a==='lvsave'){S.leave={t:$('#lt').value,d:Date.parse($('#ldt').value)||0,get:num($('#lg_').value),loan:num($('#ll').value)};S.sh=null;toast('나가는 집을 저장했어요')}
@@ -745,7 +750,7 @@ document.addEventListener('click',e=>{const t=e.target.closest('[data-a]');if(!t
 if(a==='go'&&d.p==='auth'&&S.pg==='intro'&&!matchMedia('(prefers-reduced-motion:reduce)').matches){const l=document.querySelector('.land.in');if(l){if(l.classList.contains('leave'))return;l.classList.add('leave');setTimeout(()=>{if(S.pg==='intro')act(a,d)},700);return}}
 act(a,d)});
 document.addEventListener('change',e=>{const t=e.target,n=Date.parse(t.value);if(n&&t.id==='ob')S.base=n;if(n&&t.id==='old')S.leave.d=n});
-document.addEventListener('input',e=>{const t=e.target;if(t.dataset.bn){S.banks[t.dataset.bn].n=t.value;save()}if(t.dataset.ba){S.banks[t.dataset.ba].amt=num(t.value);save()}if(t.dataset.q){S.q[t.dataset.q]=t.type==='number'?+t.value:t.value}});
+document.addEventListener('input',e=>{const t=e.target;if(t.dataset.bn){S.banks[t.dataset.bn].n=t.value;save()}if(t.dataset.ba){S.banks[t.dataset.ba].amt=num(t.value);save()}if(t.id==='opr'){S.price=num(t.value);$('#oprw').textContent=S.price?'= '+won(S.price):''}if(t.dataset.q){S.q[t.dataset.q]=t.type==='number'?+t.value:t.value}});
 {const d=read();if(d&&!d.out)load()}
 render();if(LOCK)toast('저장된 기록을 읽지 못했어요. 원본은 그대로 두었어요');
 </script></body></html>
