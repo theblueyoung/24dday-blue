@@ -3,6 +3,15 @@
 <meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>24dday</title>
+<meta name="description" content="잔금일 하나로 이사 할 일·돈·서류를 챙겨요">
+<meta name="theme-color" content="#F3F5F8">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="24dday">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 :root{color-scheme:light;--bg:#fff;--gy:#F2F4F6;--cd:#fff;--ink:#191F28;--ink2:#4E5968;--sub:#8B95A1;--mute:#B0B8C1;--ln:#E5E8EB;--p:#3D5AFE;--pd:#3D5AFE;--pdd:#0F1B2D;--lav:#ECEFFF;--co:#D9463E;--gn:#0B8A60;--gnl:#E3F5EC;--offb:#FFEBEE;
@@ -395,6 +404,32 @@ nav button.on svg{color:#fff}
 </style></head>
 <body><div id="app"><div id="scr"></div><nav id="nv"></nav><div id="sh"></div><button id="bn" data-a="ntl" aria-live="polite"></button><div id="tt"></div></div>
 <script>
+/* 테스트 기록: 오류·최근 행동·기기 정보를 개발자 구글 시트로 보내요.
+   입력한 금액·주소·이름은 보내지 않고, "어느 화면에서 어떤 버튼을 눌렀는지"만 남겨요. */
+const LOG_URL='https://script.google.com/macros/s/AKfycbzbmJqWCWsgGuYwdyBetvYLcQe45oEnLQd9V_wTazCOXiTzqlb8Smq8btjAjpjvuHmI/exec';
+const APP_VER='2026-11-26',OUTBOX='24dday:outbox',TKEY='24dday:tester',SENT=new Set();let TR=[];try{TR=JSON.parse(sessionStorage.getItem('24dday:trail')||'[]')}catch(_){}let autoN=0,lastErr='';
+const PGN={land:'시작',intro:'소개',auth:'로그인',onb:'첫 질문',home:'홈',tl:'일정',fund:'자금',svc:'서비스',my:'마이'};
+const pgName=()=>{try{return PGN[S.pg]||S.pg}catch(_){return '-'}};
+function trail(t){TR.push(new Date().toTimeString().slice(0,8)+' '+pgName()+' · '+t);if(TR.length>20)TR.shift();try{sessionStorage.setItem('24dday:trail',JSON.stringify(TR))}catch(_){}} // 새로고침해도 최근 행동이 이어지게
+function tester(){let t;try{t=JSON.parse(localStorage.getItem(TKEY))}catch(_){}if(!t||!t.id){t={id:Math.random().toString(36).slice(2,6),name:''};try{localStorage.setItem(TKEY,JSON.stringify(t))}catch(_){}}return t}
+function device(){const u=navigator.userAgent,ios=/iPhone|iPad|iPod/.test(u),and=u.match(/Android ([\d.]+)(?:; ([^;)]+))?/);
+ const os=ios?'iOS '+((u.match(/OS (\d+(?:_\d+)*)/)||[])[1]||'').replace(/_/g,'.')+(/iPad/.test(u)?' (iPad)':' (iPhone)'):and?'Android '+and[1]+(and[2]&&and[2]!=='K'?' ('+and[2]+')':''):/Mac/.test(u)?'Mac':/Windows/.test(u)?'Windows':'기타';
+ const br=/KAKAOTALK/i.test(u)?'카카오톡 안 브라우저':/NAVER/.test(u)?'네이버 앱':/SamsungBrowser/.test(u)?'삼성 인터넷':/CriOS|Chrome/.test(u)?'크롬':/Safari/.test(u)?'사파리':'기타';
+ const app=matchMedia('(display-mode: standalone)').matches||navigator.standalone?'홈 화면 앱':'브라우저';
+ return `${os} / ${br} / ${app} / 화면 ${innerWidth}x${innerHeight}@${devicePixelRatio} | ${u.slice(0,200)}`}
+function post(o){return fetch(LOG_URL,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify(o)}).then(()=>true,()=>{
+ try{const q=JSON.parse(localStorage.getItem(OUTBOX)||'[]');q.push(o);localStorage.setItem(OUTBOX,JSON.stringify(q.slice(-20)))}catch(_){}return false})}
+function send(kind,extra){const t=tester();return post({kind,tester:(t.name?t.name+' ':'')+'#'+t.id,page:pgName(),trail:TR.join('\n'),device:device(),version:APP_VER,...extra})}
+/* 인터넷이 끊겨 못 보낸 기록은 다음에 열 때 보냄 */
+function flush(){let q=[];try{q=JSON.parse(localStorage.getItem(OUTBOX)||'[]');localStorage.removeItem(OUTBOX)}catch(_){}q.forEach(post)}
+function report(msg,where){const k=msg+'|'+where;if(SENT.has(k)||autoN>=10)return;SENT.add(k);autoN++;lastErr=msg+(where?' @ '+where:'');trail('⚠ 오류: '+String(msg).slice(0,80));send('자동 오류',{error:lastErr});
+ setTimeout(()=>{try{toast('문제가 생겨 개발자에게 기록을 보냈어요. 마이 → 오류·의견 보내기로 더 알려 주세요')}catch(_){}},60)}
+addEventListener('error',e=>report(e.message||'알 수 없는 오류',`${(e.filename||'').split('/').pop()}:${e.lineno}:${e.colno}`+(e.error&&e.error.stack?'\n'+String(e.error.stack).slice(0,800):'')));
+addEventListener('unhandledrejection',e=>report(String(e.reason&&e.reason.message||e.reason),'promise'));
+try{new PerformanceObserver(l=>l.getEntries().forEach(t=>{if(t.duration>2000)report('화면이 '+(t.duration/1000).toFixed(1)+'초 동안 멈췄어요','longtask')})).observe({type:'longtask'})}catch(_){} // 안드로이드 크롬만 지원
+addEventListener('online',flush);addEventListener('load',()=>{flush();if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{})});
+</script>
+<script>
 let TODAY=Date.UTC(2026,10,5);const DEMODAY=TODAY,DAY=864e5,$=s=>document.querySelector(s);
 const PC=['#3D5AFE','#FF8A4C','#3B82F6','#E64980','#F59F00','#15AABF'];
 const STG=[{k:1,n:'계약하기',s:'계약',m:'c1'},{k:2,n:'중도금 내기',s:'중도금',m:'c2'},{k:3,n:'잔금 내기',s:'잔금',m:'bal'},{k:4,n:'이사하기',s:'이사',m:'mv'}];
@@ -646,6 +681,7 @@ return`<div class="hd"><div><h2>서비스</h2><p class="sb" style="margin:6px 0 
 P.my=()=>{const me=S.pp[0],L=vis(),mine=L.filter(e=>e.w==='me'),md2=mine.filter(done).length,O=S.pp.slice(1);
 return`<div class="hd"><h2>마이페이지</h2></div>
 <div class="c row" style="border-top:0;padding-top:4px">${av('me',1)}<div style="flex:1"><b style="font-size:20px">${esc(me.n)} (나)</b><br><small>담당 ${mine.length}개 · 완료 ${md2}개</small></div><button class="bo" data-a="pe" data-id="me">수정</button></div>
+<div class="c"><div class="sh2">테스트 중이에요</div><p class="sb" style="margin:6px 0 0">이상하거나 불편한 점을 알려 주세요. 오류가 나면 기기 정보와 최근 누른 버튼 기록이 개발자에게 자동으로 전달돼요. 입력한 금액·주소·이름은 보내지 않아요.</p><button class="btn" data-a="fbq">오류·의견 보내기</button></div>
 <div class="c"><div class="shd"><div class="sh2">이사 정보</div><button class="bo" data-a="addr">수정</button></div>
 <div class="kv"><span>지금 사는 집</span><b>${esc(S.addr.from)||'<span class="sb">입력 전</span>'}</b></div><div class="kv"><span>이사 갈 집</span><b>${esc(S.addr.to)||'<span class="sb">입력 전</span>'}</b></div><div class="kv"><span>계약금</span><b>${done(E('c1'))?'냈어요':'아직이요'}</b></div><div class="kv"><span>거래 유형</span><b>${S.type}</b></div><div class="kv"><span>${RT()?'보증금':'집 값'}</span><b>${housePrice(rows())?won(housePrice(rows())):'<span class="sb">입력 전</span>'}</b></div><div class="kv"><span>나누는 비율</span><b>계약금 ${RC()}%${RT()?'':` · 중도금 ${RM()}%`}</b></div><div class="kv"><span>잔금일</span><b>${md(S.base)}</b></div><div class="kv"><span>인테리어</span><b>${S.int?'해요':'안 해요'}</b></div><div class="kv"><span>나가는 집</span><b>${S.leave.t?`${S.leave.t==='sale'?'팔기':'전·월세 나가기'} · ${md(ld())}`:'없음'}</b></div><button class="btn lv" data-a="lve">나가는 집 ${S.leave.t?'수정':'추가'}</button></div>
 <div class="c"><div class="shd"><div class="sh2">공유자 관리</div><small>${O.length}명</small></div>
@@ -665,6 +701,7 @@ if(x.t==='edel'){const e=E(x.id);b=`<h2>‘${esc(e.n)}’을(를) 삭제할까�
 if(x.t==='pl'){const m=S.money.find(q=>q.id===x.id),r=rows().find(q=>q.id===x.id)||{io:'out',n:'',amt:'',d:TODAY,bank:'',w:'me'},fix=m&&m.ev;b=`<h2>${m?esc(m.n)+' 수정':'입출금 추가'}</h2>${fix?'':`<label>내용</label><input id="pnm" value="${esc(r.n)}" placeholder="예: 중개 수수료"><label>구분</label><select id="pio"><option value="out" ${r.io==='out'?'selected':''}>보내는 돈</option><option value="in" ${r.io==='in'?'selected':''}>받는 돈</option></select>`}<label>금액 (만원)</label><input id="pam" type="number" min="0" inputmode="numeric" value="${r.amt}"><label>날짜</label><input type="date" id="pd" value="${iso(r.d)}"><label>은행</label><input id="pbk" value="${esc(r.bank||'')}"><label>담당자</label><select id="pw">${wopt(r.w)}</select><label><input type="checkbox" id="pdn" style="width:auto;margin:0 8px 0 0" ${r.dn?'checked':''}>${fix?'이 할 일을 완료했어요':'이미 처리했어요'}</label><button class="btn" data-a="psave" data-id="${x.id}">저장하기</button>${m&&!fix?`<button class="btn gh" style="color:var(--co)" data-a="mdel" data-id="${m.id}">삭제하기</button>`:''}`}
 if(x.t==='lv'){const L=S.leave;b=`<h2>나가는 집</h2><p class="sb">할 일과 돈의 흐름이 함께 만들어져요.</p><label>어떻게 나가요?</label><select id="lt">${[['','해당 없음'],['sale','집을 팔아요'],['rent','전·월세 보증금을 돌려받아요']].map(o=>`<option value="${o[0]}" ${L.t===o[0]?'selected':''}>${o[1]}</option>`).join('')}</select><label>돈 받는 날 (잔금일)</label><input type="date" id="ldt" value="${iso(ld())}"><label>받을 돈 (만원)</label><input id="lg_" type="number" min="0" inputmode="numeric" value="${L.get||''}"><label>그날 갚을 대출 (만원)</label><input id="ll" type="number" min="0" inputmode="numeric" value="${L.loan||''}"><button class="btn" data-a="lvsave">저장하기</button>`}
 if(x.t==='dc'){const d=S.docs[x.i]||['',0,'me',''];b=`<h2>${x.i===undefined?'서류 추가':'서류 수정'}</h2><label>서류 이름</label><input id="dn" value="${esc(d[0])}" placeholder="예: 가족관계증명서"><label>설명 (선택)</label><input id="dd" value="${esc(d[3]||'')}"><label>보관하는 사람</label><select id="dw">${wopt(d[2])}</select><button class="btn" data-a="dcsave">저장하기</button>${x.i===undefined?'':'<button class="btn gh" style="color:var(--co)" data-a="dcdel">삭제하기</button>'}`}
+if(x.t==='fb')b=`<h2>오류·의견 보내기</h2><p class="sb">어느 화면에서 무엇을 하다가 그랬는지 적어 주시면 고치기 쉬워요.</p><label for="fbn">별명 (선택)</label><input id="fbn" maxlength="20" value="${esc(tester().name)}" placeholder="예: 민지"><label for="fbt">내용</label><textarea id="fbt" maxlength="2000" placeholder="예: 자금 탭에서 금액을 넣었는데 저장이 안 돼요"></textarea><button class="btn" data-a="fbs">보내기</button>`;
 if(x.t==='rst')b=`<h2>기록을 초기화할까요?</h2><p class="sb">이 기기에 저장된 일정, 서류, 자금 기록이 모두 지워지고 되돌릴 수 없어요.</p><button class="btn rd" data-a="rstx">초기화하기</button><button class="btn gy" data-a="close">취소</button>`;
 if(x.t==='pe'){const p=S.pp.find(q=>q.id===x.id),nw=!p,me=x.id==='me';b=`<h2>${nw?'공유자 추가':me?'내 프로필 수정':'공유자 프로필 수정'}</h2><label>이름</label><input id="pn" value="${p?esc(p.n):''}" placeholder="예: 민희">${me?'':`<label>관계</label><input id="pr" value="${p?esc(p.rel||''):''}" placeholder="배우자, 가족, 친구 등">`}
 <button class="btn" data-a="psv">${nw?'추가하기':'저장하기'}</button>${!nw&&!me?`<button class="btn gh" style="color:var(--co)" data-a="pdel" data-id="${p.id}">공유자 삭제하기</button>`:''}${me?'<button class="btn gh" style="color:var(--co)" data-a="wdq">회원 탈퇴</button>':''}`}
@@ -696,7 +733,8 @@ function est(){const v=SV[S.svc];S.qe=v.c(S.q);const[a,b]=S.qe;$('#est').textCon
 }
 function openSvc(k){S.qe=null;const v=SV[k];S.svc=k;S.q={dt:iso(dt(E(v.e)))};v.f.forEach(f=>S.q[f[0]]=f[2]==='n'?f[3]:f[2]==='m'?[...f[4]]:f[3][0]);S.pg='svc'}
 const LINK='https://24dday.app/invite/jamsil-jeongja';
-function act(a,d){
+const ACT={go:'이동',chk:'할 일 체크',edit:'할 일 열기',save:'할 일 저장',edel:'할 일 삭제',add:'할 일 추가 열기',addsv:'할 일 추가',start:'시작하기',join:'회원가입',login:'로그인',soc:'간편 로그인',type:'유형 고르기',paid:'계약금 답',int:'인테리어 답',lt:'나가는 집 답',pedit:'입출금 열기',psave:'입출금 저장',asave:'이사 정보 저장',addr:'이사 정보 열기',lvsave:'나가는 집 저장',svc:'서비스 고르기',qfund:'자금 계획에 넣기',msg:'상담 신청 열기',send:'상담 보내기',doc:'서류 체크',sub:'할 일/서류 전환',close:'창 닫기',fbq:'의견 창 열기',fbs:'의견 보내기'};
+function act(a,d){trail((ACT[a]||a)+(d.p?' → '+(PGN[d.p]||d.p):'')+(d.id?' ('+d.id+')':'')+(d.v?' ['+d.v+']':''));
 if(a==='go'){S.pg=d.p;if(d.p==='auth')S.em=0;if(d.p==='svc'&&!S.svc)openSvc('lw');if(d.s)S.sub=d.s;S.sh=null;$('#scr').scrollTop=0}
 else if(a==='sub')S.sub=d.v;
 else if(a==='ex')S.ex=S.ex===d.id?null:d.id;
@@ -767,6 +805,8 @@ else if(a==='regs'){S.sh=null;toast('업체 등록 문의를 보냈어요. 곧 �
 else if(a==='send'){S.asked=1;S.sh=null;toast('문의를 보냈어요. 답변은 알림으로 알려드려요')}
 else if(a==='dial'){S.sh=null;toast('전화 앱으로 연결돼요 (시연)')}
 else if(a==='close')S.sh=null;
+else if(a==='fbq')S.sh={t:'fb'};
+else if(a==='fbs'){const note=$('#fbt').value.trim();if(!note)return toast('내용을 적어 주세요');const t=tester();t.name=$('#fbn').value.trim().slice(0,20);try{localStorage.setItem(TKEY,JSON.stringify(t))}catch(_){}send('의견',{note,error:lastErr}).then(ok=>toast(ok?'보냈어요. 알려 줘서 고마워요!':'인터넷이 연결되면 바로 보낼게요'));S.sh=null}
 render()}
 document.addEventListener('click',e=>{const t=e.target.closest('[data-a]');if(!t)return;const a=t.dataset.a,d=t.dataset;
 if(a==='go'&&d.p==='auth'&&S.pg==='intro'&&!matchMedia('(prefers-reduced-motion:reduce)').matches){const l=document.querySelector('.land.in');if(l){if(l.classList.contains('leave'))return;l.classList.add('leave');setTimeout(()=>{if(S.pg==='intro')act(a,d)},700);return}}
